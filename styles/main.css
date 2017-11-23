@@ -1,0 +1,90 @@
+html, body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+/* h2 */
+.h2-style {
+    font-family: 'Cinzel', serif;
+}
+/*navbar*/
+.navbar-brand {
+    height: 80px;
+}
+.nav-logo {
+    height: 50px;
+}
+.navbar {
+    margin-bottom: 0;
+}
+.navbar-default {
+    background-color: white;
+}
+
+/*font awosome*/
+.fa-pencil-square {
+    font-size: 25px;
+}
+
+/*jumbotron*/
+.jumbotron {
+    margin-bottom: 0;
+}
+
+/*circulos categorias*/
+.img-circle {
+    border: 1px solid black;
+    border-radius: 10px;
+}
+.categoria-margin {
+    margin: 80px 0;  
+}
+.categoria {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+/* subgategorias */
+.no-class-button {
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    float: right;
+}
+.marca-prev {
+
+}
+.subcategoria-style {
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 10px;
+    position: absolute;
+    bottom: 10px;
+    left: 25px;
+    width: 80%;
+}
+.subcategoria-style-lett {
+    color: white; 
+    font-weight: bold; 
+    font-size: 16px;
+}
+/*brand social symbols */
+.brand-symbol {
+    font-size: 40px;
+    margin-right: 15px;
+    color: black;
+}
+/*footer*/
+.footer-style {
+    background-color: lightgrey;
+    padding: 60px 0;
+}
+
+@media screen and (max-width: 320px) {
+    
+}
