@@ -1,66 +1,64 @@
 <div class="container">
-        <div class="categoria-margin">
-            <div ng-show="isMarcaList">
-                <div class="row">
-                    <div class="col-sm-12 text-center">
-                        <h2 class="h2-style">Joias, Acessórios e Malas</h2>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-4" ng-repeat="item in joiasList">
-                        <div class="marca-prev" style="background-image: url({{item.marca.logo}}); background-size: cover; background-position: center; height: 360px">
-                            <div class="subcategoria-style">
-                                <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett">{{item.marca.desqPeq}}</p>
-                                <button ng-click="getDetails(item.$id)">Mais</button>
-                            </div>
+    <div class="categoria-margin">
+        <div ng-show="isMarcaList">
+            <div class="row">
+                <h2 class="text-center font-hand">Joias, Acessórios e Malas</h2>
+            </div>
+            <div class="row">
+                <div class="col-sm-4" ng-repeat="item in joiasList">
+                    <div class="marca-prev" style="background-image: url({{item.marca.logo}}); background-size: cover; background-position: center; height: 360px">
+                        <div class="subcategoria-style">
+                            <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
+                            <p class="subcategoria-style-lett">{{item.marca.desqPeq}}</p>
+                            <button ng-click="getDetails(item.$id)">Mais</button>
                         </div>
                     </div>
                 </div>
-            </div> <!-- isMarcaList -->
-            <div ng-show="isMarcaDetails">
-                <div class="row">
-                    <div class="col-sm-5">
-                        <img src="{{marca.logo}}" style="width: 100%; border: 1px solid black; border-radius: 10px; padding: 10px;">
-                    </div>
-                    <div class="col-sm-6">
-                        <h1>{{marca.nome}}</h1>
-                        <p>{{marca.categoria}}</p>
-                        <p>{{marca.subCategoria}}</p>
-                        <p>{{marca.desqPeq}}</p>
-                        <p>{{marca.desqGeral}}</p>
-                        <p>{{marca.morada}}</p>
-                        <p>{{marca.localidade}}</p>
-                        <p>{{marca.concelho}}</p>
-                        <p>{{marca.telefone}}</p>
-                        <p>{{marca.telemovel}}</p>
-                        <p>{{marca.email}}</p>
-                        <p>{{marca.website}}</p>
-                        <a href="{{marca.facebook}}" target="_blank" ng-show="marca.facebook"><i class="fa fa-facebook-square brand-symbol" aria-hidden="true"></i></a>
-                        <a href="{{marca.instagram}}" target="_blank" ng-show="marca.instagram"><i class="fa fa-instagram brand-symbol" aria-hidden="true"></i></a>
-                        <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
-                        <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
-                        <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a>
-                        
-                    </div>
-                    <div class="col-sm-1">
-                        <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
-                    </div>
+            </div>
+        </div> <!-- isMarcaList -->
+        <div ng-show="isMarcaDetails">
+            <div class="row">
+                <div class="col-sm-5">
+                    <img src="{{marca.logo}}" style="width: 100%; border: 1px solid black; border-radius: 10px; padding: 10px;">
                 </div>
-                <div class="row" style="margin-top: 30px;">
-                    <div class="col-sm-3">
-                        <img src="{{marca.foto1}}" style="width: 100%">
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="{{marca.foto2}}" style="width: 100%">
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="{{marca.foto3}}" style="width: 100%">
-                    </div>
-                    <div class="col-sm-3">
-                        <img src="{{marca.foto4}}" style="width: 100%">
-                    </div>
+                <div class="col-sm-6">
+                    <h1>{{marca.nome}}</h1>
+                    <p>{{marca.categoria}}</p>
+                    <p>{{marca.subCategoria}}</p>
+                    <p>{{marca.desqPeq}}</p>
+                    <p>{{marca.desqGeral}}</p>
+                    <p>{{marca.morada}}</p>
+                    <p>{{marca.localidade}}</p>
+                    <p>{{marca.concelho}}</p>
+                    <p>{{marca.telefone}}</p>
+                    <p>{{marca.telemovel}}</p>
+                    <p>{{marca.email}}</p>
+                    <p>{{marca.website}}</p>
+                    <a href="{{marca.facebook}}" target="_blank" ng-show="marca.facebook"><i class="fa fa-facebook-square brand-symbol" aria-hidden="true"></i></a>
+                    <a href="{{marca.instagram}}" target="_blank" ng-show="marca.instagram"><i class="fa fa-instagram brand-symbol" aria-hidden="true"></i></a>
+                    <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
+                    <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
+                    <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a>
+                    
+                </div>
+                <div class="col-sm-1">
+                    <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="col-sm-3">
+                    <img src="{{marca.foto1}}" style="width: 100%">
+                </div>
+                <div class="col-sm-3">
+                    <img src="{{marca.foto2}}" style="width: 100%">
+                </div>
+                <div class="col-sm-3">
+                    <img src="{{marca.foto3}}" style="width: 100%">
+                </div>
+                <div class="col-sm-3">
+                    <img src="{{marca.foto4}}" style="width: 100%">
                 </div>
             </div>
         </div>
     </div>
+</div>

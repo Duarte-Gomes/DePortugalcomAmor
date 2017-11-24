@@ -28,14 +28,10 @@ html, body {
 .nav-ul-style {
     font-size: 20px;
 }
+
 /*font awosome*/
 .fa-pencil-square {
     font-size: 25px;
-}
-
-/*jumbotron*/
-.jumbotron {
-    margin-bottom: 0;
 }
 
 /*quadrados categorias*/
@@ -70,13 +66,14 @@ html, body {
     float: right;
 }
 .marca-prev {
-
+    border: 1px solid black;
+    margin: 15px 0;
 }
 .subcategoria-style {
     background-color: rgba(0, 0, 0, 0.3);
     padding: 10px;
     position: absolute;
-    bottom: 10px;
+    bottom: 25px;
     left: 25px;
     width: 80%;
 }
@@ -85,12 +82,14 @@ html, body {
     font-weight: bold; 
     font-size: 16px;
 }
+
 /*brand social symbols */
 .brand-symbol {
     font-size: 40px;
     margin-right: 15px;
     color: black;
 }
+
 /*footer*/
 .footer-style {
     background-color: lightgrey;
