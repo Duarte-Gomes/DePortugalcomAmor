@@ -82,6 +82,12 @@ html, body {
     font-weight: bold; 
     font-size: 16px;
 }
+.subcategoria-style-lett-2 {
+    color: white; 
+    font-weight: bold; 
+    font-size: 16px;
+    margin-bottom: 0;
+}
 
 /*brand social symbols */
 .brand-symbol {

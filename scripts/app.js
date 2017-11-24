@@ -73,7 +73,7 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
         })
-        .when('/joias-acessorios-malas', {
+        .when('/marcas/joias-acessorios-malas', {
 			templateUrl: 'views/joias-acessorios-malas.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
