@@ -47,6 +47,16 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			templateUrl: 'views/main.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
+        })
+        .when('/quemsomos', {
+			templateUrl: 'views/quemsomos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+        })
+        .when('/faleconnosco', {
+			templateUrl: 'views/faleconnosco.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
 		})
         .when('/marcas', {
 			templateUrl: 'views/submarcas.html',

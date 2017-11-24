@@ -5,11 +5,13 @@ html, body {
 .font-hand {
     font-family: 'PT Serif', serif;
     text-transform: uppercase;
+    margin: 0 0 20px 0;
 }
 /* h2 */
 /* .h2-style {
     font-family: 'Cinzel', serif;
 } */
+
 /*navbar*/
 .navbar-brand {
     height: 230px;
@@ -26,7 +28,11 @@ html, body {
 .nav-ul-style {
     font-size: 20px;
 }
-
+.jumbotron {
+    background-image: url('/images/INAL1839.jpg');
+    background-size: cover;
+    height: 300px;
+}
 /*font awosome*/
 .fa-pencil-square {
     font-size: 25px;
@@ -38,9 +44,7 @@ html, body {
 }
 
 /*circulos categorias*/
-.img-circle {
-    border: 1px solid black;
-    border-radius: 10px;
+.categoria-img-style {
     margin: 15px 0;
 }
 .categoria-margin {
