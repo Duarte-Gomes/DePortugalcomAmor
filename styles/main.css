@@ -28,11 +28,6 @@ html, body {
 .nav-ul-style {
     font-size: 20px;
 }
-.jumbotron {
-    background-image: url('/images/INAL1839.jpg');
-    background-size: cover;
-    height: 300px;
-}
 /*font awosome*/
 .fa-pencil-square {
     font-size: 25px;
@@ -43,7 +38,11 @@ html, body {
     margin-bottom: 0;
 }
 
-/*circulos categorias*/
+/*quadrados categorias*/
+.back-marcas {
+    background-image: url('/images/marcas-back.jpg');
+    background-size: cover;
+}
 .categoria-img-style {
     margin: 15px 0;
 }
@@ -55,8 +54,8 @@ html, body {
     border-radius: 10px;
     color: white;
     background-color: black;
-    height: 120px;
-    width: 120px;
+    height: 200px;
+    width: 200px;
     text-align: center;
     margin: 15px auto;
 }
