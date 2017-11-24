@@ -1,22 +1,30 @@
 html, body {
     font-family: 'Nunito Sans', sans-serif;
 }
-/* h2 */
-.h2-style {
-    font-family: 'Cinzel', serif;
+/* font hand */
+.font-hand {
+    font-family: 'PT Serif', serif;
+    text-transform: uppercase;
 }
+/* h2 */
+/* .h2-style {
+    font-family: 'Cinzel', serif;
+} */
 /*navbar*/
 .navbar-brand {
-    height: 80px;
+    height: 230px;
 }
 .nav-logo {
-    height: 50px;
+    height: 200px;
 }
 .navbar {
     margin-bottom: 0;
 }
 .navbar-default {
     background-color: white;
+}
+.nav-ul-style {
+    font-size: 20px;
 }
 
 /*font awosome*/
@@ -33,9 +41,10 @@ html, body {
 .img-circle {
     border: 1px solid black;
     border-radius: 10px;
+    margin: 15px 0;
 }
 .categoria-margin {
-    margin: 80px 0;  
+    margin: 65px 0;  
 }
 .categoria {
     /* border: 1px solid black; */
@@ -85,6 +94,11 @@ html, body {
     padding: 60px 0;
 }
 
+@media (min-width: 786px) {
+    .navbar-nav {
+        margin: 96px 0 0 0;
+    }
+}
 @media screen and (max-width: 320px) {
     
 }

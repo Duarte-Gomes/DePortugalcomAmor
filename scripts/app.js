@@ -53,6 +53,16 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
         })
+        .when('/eventos', {
+			templateUrl: 'views/subeventos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+        })
+        .when('/turismo', {
+			templateUrl: 'views/subturismo.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+        })
         .when('/joias-acessorios-malas', {
 			templateUrl: 'views/joias-acessorios-malas.html',
 			controller: 'MainCtrl',
