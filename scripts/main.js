@@ -65,6 +65,12 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             } */
         }
 
-       
+        angular.element('.categorias-a').click(function() {
+            angular.element("html, body").animate({ scrollTop: 0 }, "fast");
+        })
+        angular.element('.marca-margin').click(function() {
+            console.log('ois')
+            angular.element("html, body").animate({ scrollTop: 0 }, "fast");
+        })
     }
 ]);

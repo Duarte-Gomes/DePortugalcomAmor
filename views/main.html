@@ -1,10 +1,31 @@
 <div class="container">
+    <div class="hidden-xs">
+        <ks-swiper-container loop="true" autoplay="5000">
+            <ks-swiper-slide class="swiper-slide swiper-heigth-sm">
+                <img style="width:100%; margin-top: -130px;" src="/images/Image-1.png">
+            </ks-swiper-slide>
+            <ks-swiper-slide class="swiper-slide swiper-heigth-sm">
+                    <img style="width:100%; margin-top: -280px;" src="/images/Image-2.png">
+                </ks-swiper-slide>
+        </ks-swiper-container>
+    </div>
+    <div class="visible-xs">
+        <ks-swiper-container loop="true" autoplay="5000">
+            <ks-swiper-slide class="swiper-slide swiper-heigth-xs">
+                <img style="width:100%; margin-top: -15px;" src="/images/Image-1.png">
+            </ks-swiper-slide>
+            <ks-swiper-slide class="swiper-slide swiper-heigth-xs">
+                <img style="width:100%; margin-top: -30px;" src="/images/Image-2.png">
+            </ks-swiper-slide>
+        </ks-swiper-container>
+    </div>
     <div class="categoria-margin">
         <div class="row">
-            <h2 class="text-center font-hand">O que é nacional tem qualidade... e nós valorizamos!</h2>
+            <h2 class="text-center font-hand-title hidden-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
+            <h2 class="text-center font-hand-title-xs visible-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
         </div>
         <div class="row">
-            <div class="col-sm-4 text-center">
+            <!-- <div class="col-sm-4 text-center">
                 <a href="eventos"><img src="./images/eventos.png" class="categoria-img-style"></a>
             </div>
             <div class="col-sm-4 text-center">
@@ -12,6 +33,21 @@
             </div>
             <div class="col-sm-4 text-center">
                 <a href="/turismo"><img src="./images/turismo.png" class="categoria-img-style"></a>
+            </div> -->
+            <div class="col-sm-4">
+                <div class="vertentes" style="background-image: url('images/eventos.jpg')">
+                    <a class="categorias-a" href="/eventos">Eventos</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="vertentes" style="background-image: url('images/marcas.jpg')">
+                    <a class="categorias-a" href="/marcas">Marcas Portuguesas Online</a>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="vertentes" style="background-image: url('images/turismo.jpg')">
+                    <a class="categorias-a" href="turismo">Turismo</a>
+                </div>
             </div>
         </div>
     </div>  

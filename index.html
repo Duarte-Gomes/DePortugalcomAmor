@@ -29,14 +29,13 @@
     <link rel="manifest" href="site.webmanifest">
     <link rel="apple-touch-icon" href="icon.png">
 
-    <link href="https://fonts.googleapis.com/css?family=PT+Serif:400i" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,700,900" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Cinzel:900" rel="stylesheet">
-    <link rel="stylesheet" href="/dist/css/bootstrap/bootstrap.css" />
-    <link rel="stylesheet" href="/dist/css/font-awesome/css/font-awesome.css" />
-    <link rel="stylesheet" href="/dist/css/angular-datatables/angular-datatables.css" />
-    
+    <link href="https://fonts.googleapis.com/css?family=Fanwood+Text:400i" rel="stylesheet">
+    <link rel="stylesheet" href="/dist/css/bootstrap/bootstrap.css">
+    <link rel="stylesheet" href="/dist/css/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/dist/css/angular-datatables/angular-datatables.css">
+    <link rel="stylesheet" href="/dist/css/angular-swiper/swiper.min.css">
+
     <link rel="stylesheet" href="/styles/main.css">
     
 </head>
@@ -51,18 +50,23 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="/"><img class="nav-logo" src="./images/fav.jpg"></a>
+                <a class="navbar-brand visible-xs" href="/"><img class="nav-logo" src="./images/logo.jpg"></a>
             </div>
         
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right nav-ul-style">
+                <ul class="nav navbar-nav navbar-left nav-ul-style-1">
                     <li><a href="/">Início<span class="sr-only">(current)</span></a></li>
                     <li><a href="/quemsomos">Quem Somos</a></li>
                     <li><a href="/faleconnosco">Fale Connosco</a></li>
-                </ul>
-                
+                </ul>  
+                <ul class="nav navbar-nav navbar-right nav-ul-style-2 barra-2">
+                    <a class="navbar-brand hidden-xs" href="/"><img class="nav-logo" src="./images/logo.jpg"></a>
+                </ul>  
             </div><!-- /.navbar-collapse -->
+           
+               
+           
         </div>
     </nav>
 
@@ -118,8 +122,10 @@
 
     <script src="/dist/js/jquery/jquery-3.1.1.js"></script>
     <script src="/dist/js/angular-datatables/jquery.dataTables.min.js"></script>
+    <script src="/dist/js/angular-swiper/swiper.js"></script>
     <script src="/dist/js/angular/angular.js"></script>
     <script src="/dist/js/angular-datatables/angular-datatables.js"></script>
+    <script src="/dist/js/angular-swiper/angular-swiper.js"></script>
     
     <script src="/dist/js/bootstrap/bootstrap.js"></script>
     <script src="/dist/js/angular/angular-animate.js"></script>

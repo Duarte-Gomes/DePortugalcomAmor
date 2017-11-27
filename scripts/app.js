@@ -28,7 +28,8 @@ var app = angular.module('DePortugalcomAmorApp', [
 	'ngRoute',
 	'ngSanitize',
 	'firebase',
-	'datatables'
+	'datatables',
+	'ksSwiper'
 ]);
 
 app.run(["$rootScope", "$location", function($rootScope, $location) {

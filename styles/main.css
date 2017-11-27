@@ -1,23 +1,72 @@
 html, body {
     font-family: 'Nunito Sans', sans-serif;
 }
+
+/* swiper */
+.swiper-heigth-sm {
+    height:415px;
+}
+.swiper-heigth-xs {
+    height:146px;
+}
+/* breadcrumbs */
+.breadcrumbs {
+    margin: 20px 0;
+}
+.breadcrumbs-margin-left {
+    margin-left: 40px;
+}
+.breadcrumbs1 {
+    font-size: 20px;
+    color: black;
+}
+.breadcrumbs1:hover {
+    font-size: 20px;
+    color: #777;
+}
+.breadcrumbs-sep {
+    font-size: 20px;
+    color: black;
+}
+.breadcrumbs2 {
+    font-size: 20px;
+    color: black;
+}
+.breadcrumbs2:hover {
+    font-size: 20px;
+    color: #777;
+}
 /* font hand */
-.font-hand {
-    font-family: 'PT Serif', serif;
+.font-hand-title {
+    font-family: 'Fanwood Text', serif;
     text-transform: uppercase;
+    
     margin: 0 0 20px 0;
 }
+.font-hand-title-xs {
+    font-family: 'Fanwood Text', serif;
+    text-transform: uppercase;
+    
+    margin: 0 0 10px 0;
+    font-size: 26px;
+}
+.font-hand-text {
+    font-family: 'Fanwood Text', serif;
+    text-transform: uppercase;
+}
+
 /* h2 */
-/* .h2-style {
-    font-family: 'Cinzel', serif;
-} */
+.h2-title {
+    margin: 0 0 15px 0;
+}
 
 /*navbar*/
 .navbar-brand {
-    height: 230px;
+    height: 120px;
+    float: left;
 }
 .nav-logo {
-    height: 200px;
+    height: 90px;
 }
 .navbar {
     margin-bottom: 0;
@@ -25,8 +74,20 @@ html, body {
 .navbar-default {
     background-color: white;
 }
-.nav-ul-style {
-    font-size: 20px;
+.nav-ul-style-1 {
+    font-size: 18px;
+}
+.nav-ul-style-2 {
+    font-size: 18px;
+}
+.barra-2 {
+    width: 60%;
+}
+.navbar-toggle {
+    float: left;
+    margin-right: 0;
+    margin-left: 15px;
+    margin-top: 15px;
 }
 
 /*font awosome*/
@@ -34,26 +95,70 @@ html, body {
     font-size: 25px;
 }
 
-/*quadrados categorias*/
-.back-marcas {
-    background-image: url('/images/marcas-back.jpg');
-    background-size: cover;
-}
-.categoria-img-style {
-    margin: 15px 0;
-}
-.categoria-margin {
-    margin: 65px 0;  
-}
-.categoria {
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    color: white;
+/*vertentes */
+.vertentes {
+    border-radius: 50%;
     background-color: black;
     height: 200px;
     width: 200px;
     text-align: center;
     margin: 15px auto;
+    position: relative;
+}
+
+/*quadrados categorias*/
+.back-marcas {
+    background-image: url('/images/marcas-back.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.categoria-img-style {
+    margin: 15px 0;
+}
+.categoria-margin {
+    margin: 35px 0 65px;  
+}
+.categoria {
+    border-radius: 10px;
+    background-color: black;
+    height: 200px;
+    width: 200px;
+    text-align: center;
+    margin: 15px auto;
+    position: relative;
+}
+.categoria-xs {
+    /* border: 1px solid black; */
+    border-radius: 10px;
+    color: white;
+    background-color: black;
+    height: 200px;
+    text-align: center;
+    margin: 15px auto;
+}
+.categorias-a {
+    font-family: 'Fanwood Text', serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 5px;
+}
+.categorias-a:hover {
+    font-family: 'Fanwood Text', serif;
+    text-transform: uppercase;
+    color: white;
+    font-size: 25px;
+    top: 50%;
+    left: 0;
+    right: 0;
+    position: absolute;
+    transform: translateY(-50%);
+    padding: 5px;
 }
 
 /* subgategorias */
@@ -67,13 +172,33 @@ html, body {
 }
 .marca-prev {
     border: 1px solid black;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;    
+    height: 360px;
+}
+.marca-prev-md {
+    border: 1px solid black;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+    height: calc(100vw / 3.5);
+}
+.marca-prev-xs {
+    border: 1px solid black;
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;    
+    height: calc(100vw - 30px);
+}
+.marca-margin {
     margin: 15px 0;
 }
 .subcategoria-style {
-    background-color: rgba(0, 0, 0, 0.3);
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 10px;
     position: absolute;
-    bottom: 25px;
+    bottom: 10px;
     left: 25px;
     width: 80%;
 }
@@ -84,9 +209,14 @@ html, body {
 }
 .subcategoria-style-lett-2 {
     color: white; 
-    font-weight: bold; 
     font-size: 16px;
     margin-bottom: 0;
+}
+.marca-detail-top {
+    margin-top: 15px;
+}
+.marca-detail-bottom {
+    margin-bottom: 15px;
 }
 
 /*brand social symbols */
@@ -103,10 +233,12 @@ html, body {
 }
 
 @media (min-width: 786px) {
-    .navbar-nav {
-        margin: 96px 0 0 0;
+    .nav-ul-style-1 {
+        margin-top: 30px;
     }
 }
-@media screen and (max-width: 320px) {
-    
+@media screen and (max-width: 767px) {
+    .back-marcas {
+        background-image: none;
+    }
 }
