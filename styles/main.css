@@ -36,23 +36,46 @@ html, body {
     font-size: 20px;
     color: #777;
 }
+.breadcrumbs1-xs {
+    font-size: 18px;
+    color: black;
+}
+.breadcrumbs1-xs:hover {
+    font-size: 18px;
+    color: #777;
+}
+.breadcrumbs-sep-xs {
+    font-size: 18px;
+    color: black;
+}
+.breadcrumbs2-xs {
+    font-size: 18px;
+    color: black;
+}
+.breadcrumbs2-xs:hover {
+    font-size: 18px;
+    color: #777;
+}
+
 /* font hand */
 .font-hand-title {
-    font-family: 'Fanwood Text', serif;
-    text-transform: uppercase;
-    
+    font-family: 'Playfair Display', serif;
+    /* text-transform: uppercase; */
     margin: 0 0 20px 0;
 }
 .font-hand-title-xs {
-    font-family: 'Fanwood Text', serif;
-    text-transform: uppercase;
+    font-family: 'Playfair Display', serif;
+    /* text-transform: uppercase; */
     
     margin: 0 0 10px 0;
     font-size: 26px;
 }
 .font-hand-text {
-    font-family: 'Fanwood Text', serif;
+    font-family: 'Kalam', cursive;
     text-transform: uppercase;
+}
+.font-hand-desc {
+    font-family: 'Shadows Into Light', cursive;
 }
 
 /* h2 */
@@ -107,11 +130,6 @@ html, body {
 }
 
 /*quadrados categorias*/
-.back-marcas {
-    background-image: url('/images/marcas-back.jpg');
-    background-size: cover;
-    background-position: center;
-}
 .categoria-img-style {
     margin: 15px 0;
 }
@@ -119,25 +137,29 @@ html, body {
     margin: 35px 0 65px;  
 }
 .categoria {
-    border-radius: 10px;
+    /* border-radius: 10px; */
+    border: 1px solid black;
     background-color: black;
-    height: 200px;
-    width: 200px;
+    height: 262px;
     text-align: center;
     margin: 15px auto;
     position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .categoria-xs {
-    /* border: 1px solid black; */
-    border-radius: 10px;
-    color: white;
+    /* border-radius: 10px; */
+    border: 1px solid black;
     background-color: black;
-    height: 200px;
+    height: calc(100vw - 30px);
     text-align: center;
     margin: 15px auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .categorias-a {
-    font-family: 'Fanwood Text', serif;
+    font-family: 'Kalam', cursive;
     text-transform: uppercase;
     color: white;
     font-size: 25px;
@@ -149,7 +171,7 @@ html, body {
     padding: 5px;
 }
 .categorias-a:hover {
-    font-family: 'Fanwood Text', serif;
+    font-family: 'Kalam', cursive;
     text-transform: uppercase;
     color: white;
     font-size: 25px;
@@ -225,7 +247,18 @@ html, body {
     margin-right: 15px;
     color: black;
 }
-
+.icon-detail {
+    font-size: 22px;
+    margin-right: 10px;
+}
+.icon-detail-place {
+    font-size: 29px;
+    margin-right: 10px;
+}
+.icon-detail-mobile {
+    font-size: 35px;
+    margin-right: 10px;
+}
 /*footer*/
 .footer-style {
     background-color: lightgrey;

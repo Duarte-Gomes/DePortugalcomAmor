@@ -13,10 +13,17 @@ app.factory("subCategoriasList", ["$firebaseArray",
 ]);
 
 app.factory("marcasList", ["$firebaseArray",
-function($firebaseArray) {
-    var ref = firebase.database().ref('Marcas');
-    return $firebaseArray(ref);
-}
+    function($firebaseArray) {
+        var ref = firebase.database().ref('Marcas');
+        return $firebaseArray(ref);
+    }
+]);
+
+app.factory("totalVisitCount", ["$firebaseArray",
+    function($firebaseArray) {
+        var ref = firebase.database().ref('TotalVisitCount');
+        return $firebaseArray(ref);
+    }
 ]);
 /* app.factory("Auth", ["$firebaseAuth",
     function($firebaseAuth) {

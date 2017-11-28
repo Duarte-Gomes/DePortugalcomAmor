@@ -59,6 +59,7 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
+
         .when('/marcas', {
 			templateUrl: 'views/submarcas.html',
 			controller: 'MainCtrl',
@@ -73,9 +74,45 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			templateUrl: 'views/subturismo.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
-        })
+		})
+		
         .when('/marcas/joias-acessorios-malas', {
 			templateUrl: 'views/joias-acessorios-malas.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/bebe-e-crianca', {
+			templateUrl: 'views/bebe-e-crianca.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/vestuario-e-calcado', {
+			templateUrl: 'views/vestuario-e-calcado.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/animais', {
+			templateUrl: 'views/animais.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/ideias-unicas', {
+			templateUrl: 'views/ideias-unicas.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/tipicamente-portugues', {
+			templateUrl: 'views/tipicamente-portugues.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/artesanato', {
+			templateUrl: 'views/artesanato.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/marcas/decoracao', {
+			templateUrl: 'views/decoracao.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
