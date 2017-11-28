@@ -116,6 +116,27 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
+
+		.when('/eventos/empresas-de-organizaçao-de-eventos', {
+			templateUrl: 'views/organizacao-eventos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/eventos/bolos-e-pastelaria', {
+			templateUrl: 'views/bolos-pastelaria.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/eventos/servico-de-fotografia-e-video', {
+			templateUrl: 'views/fotografia-video.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/eventos/sempre-em-festa', {
+			templateUrl: 'views/sempre-festa.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+        })
     .otherwise({
         redirectTo: '/'
     });

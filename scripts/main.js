@@ -36,11 +36,16 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.tipicamenteList = {};
         $scope.artesanatoList = {};
         $scope.decoracaoList = {};
+        $scope.eventosList = {};
+        $scope.bolosList = {};
+        $scope.fotografiaList = {};
+        $scope.festaList = {};
 
         $scope.totalVisitCount = {};
         $scope.totalCounter = 0;
-
+        
         $scope.marca = {};
+        $scope.marca.counter = 0;
 
         var contJoias = 0;
         var contBebe = 0;
@@ -50,6 +55,10 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var contTipicamente = 0;
         var contArtesanato = 0;
         var contDecoracao = 0;
+        var contEventos = 0;
+        var contBolos = 0;
+        var contFotografia = 0;
+        var contFesta = 0;
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -82,6 +91,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         marcasList.$loaded().then(function() {  
             $scope.marcasList = marcasList;
             for (var i = 0; i < $scope.marcasList.length; i++) {
+                //if($scope.marcasList[i].marca.subCategoria != null && $scope.marcasList[i].marca.publish) {
                 if($scope.marcasList[i].marca.subCategoria != null) {
                     if($scope.marcasList[i].marca.subCategoria === "Joias, Acessórios e Malas") {
                         $scope.joiasList[contJoias] = $scope.marcasList[i];
@@ -115,6 +125,22 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                         $scope.decoracaoList[contDecoracao] = $scope.marcasList[i];
                         contDecoracao++;
                     }
+                    if($scope.marcasList[i].marca.subCategoria === "Empresas de Organização de Eventos") {
+                        $scope.eventosList[contEventos] = $scope.marcasList[i];
+                        contEventos++;
+                    }
+                    if($scope.marcasList[i].marca.subCategoria === "Bolos e Pastelaria") {
+                        $scope.bolosList[contBolos] = $scope.marcasList[i];
+                        contBolos++;
+                    }
+                    if($scope.marcasList[i].marca.subCategoria === "Serviço de Fotografia e Vídeo") {
+                        $scope.fotografiaList[contFotografia] = $scope.marcasList[i];
+                        contFotografia++;
+                    }
+                    if($scope.marcasList[i].marca.subCategoria === "Sempre em Festa (casamentos, batizados e muitos artigos)") {
+                        $scope.festaList[contFesta] = $scope.marcasList[i];
+                        contFesta++;
+                    }
                 }
             }
         });
@@ -124,14 +150,27 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             $scope.isMarcaList = false;
             $scope.isMarcaDetails = true;
             $scope.getMarcaDetails(param);
-            locationHref = window.location.href;
+            locationHref = window.location.href; 
         };
+
+        
 
         $scope.getMarcaDetails = function(param) {
             postKey = param;
             var record = $scope.marcasList.$getRecord(param);
             postIdx = $scope.marcasList.$indexFor(param);
             $scope.marca = record.marca;
+
+            if ($scope.marca.counter == null) {
+                $scope.marca.counter = 1;
+            } else {
+                $scope.marca.counter++;
+            }   
+            
+            $scope.marcasList.$save(postIdx).then(function() {
+                //$scope.getFirstPostDetails(postKey); 
+                console.log ($scope.marca) 
+            });
         };
 
         $scope.atras = function() {

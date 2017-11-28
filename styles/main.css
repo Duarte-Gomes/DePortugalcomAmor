@@ -2,6 +2,16 @@ html, body {
     font-family: 'Nunito Sans', sans-serif;
 }
 
+div #mc_embed_signup_scroll label {
+    font-family: 'Nunito Sans', sans-serif;
+}
+#mc_embed_signup .button {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+#mce-EMAIL {
+    font-family: 'Nunito Sans', sans-serif !important;
+}
+
 /* swiper */
 .swiper-heigth-sm {
     height:415px;
