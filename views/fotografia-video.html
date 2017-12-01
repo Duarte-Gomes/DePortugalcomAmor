@@ -15,7 +15,7 @@
                 <h2 class="text-center font-hand-title">Serviço de Fotografia e Vídeo</h2>
             </div>
             <div class="row">
-                <div class="col-sm-4 marca-margin" ng-repeat="item in fotografiaList">
+                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in fotografiaList">
                     <a class="to-top" ng-click="getDetails(item.$id)">
                         <div class="marca-prev hidden-md hidden-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
@@ -76,11 +76,16 @@
                         <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+                        <a href="{{marca.youtube}}" target="_blank" ng-show="marca.youtube"><i class="fa fa-youtube-square brand-symbol" aria-hidden="true"></i></a> 
+                        <a href="{{marca.vimeo}}" target="_blank" ng-show="marca.vimeo"><i class="fa fa-vimeo-square brand-symbol" aria-hidden="true"></i></a> 
                     </div>
                 </div>
             </div>
             <div class="row" style="margin-top: 30px;">
-                <div class="marca-detail-bottom clearfix">
+                <div class="marca-detail-bottom text-center clearfix">
+                    <div class="col-sm-2">
+                        <a href="{{marca.reel}}" target="_blank" ng-show="marca.reel"><i class="fa fa-film brand-symbol-reel" aria-hidden="true"></i><span style="display: block; color: black; font-size: 30px;">VIDEO DEMO</span></a>
+                    </div>
                     <div class="col-sm-3">
                         <img src="{{marca.foto1}}" style="width: 100%">
                     </div>
@@ -92,6 +97,12 @@
                     </div>
                     <div class="col-sm-3">
                         <img src="{{marca.foto4}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto5}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto6}}" style="width: 100%">
                     </div>
                 </div>
             </div>

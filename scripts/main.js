@@ -11,8 +11,8 @@ app.directive('fileModel',['$parse', function ($parse){
     }
 }]);
 
-app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'totalVisitCount', '$firebaseStorage', '$window',
-    function($scope, categoriasList, subCategoriasList, marcasList, totalVisitCount, $firebaseStorage, $window) {
+app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'totalVisitCount', '$firebaseStorage', '$window', '$location',
+    function($scope, categoriasList, subCategoriasList, marcasList, totalVisitCount, $firebaseStorage, $window, $location) {
 
         var postKey;
         var postKeyCount;
@@ -46,6 +46,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         
         $scope.marca = {};
         $scope.marca.counter = 0;
+        $scope.totalCount = 0;
 
         var contJoias = 0;
         var contBebe = 0;
@@ -59,6 +60,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var contBolos = 0;
         var contFotografia = 0;
         var contFesta = 0;
+
+        var fromDestaque1;
+        var fromDestaque2;
+        var fromDestaque3;
+        var fromDestaque4;
+
+        var counterrr = 0;
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -86,8 +94,12 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     var record = $scope.totalVisitCount.$getRecord(temp);
                 });         
             }
+            $scope.totalCount = $scope.totalVisitCount.length;
+            counterrr = $scope.totalVisitCount.length;
+            angular.element('#counterrr').html(counterrr);
         });
 
+        
         marcasList.$loaded().then(function() {  
             $scope.marcasList = marcasList;
             for (var i = 0; i < $scope.marcasList.length; i++) {
@@ -143,6 +155,10 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     }
                 }
             }
+            $scope.getDestaque1();
+            $scope.getDestaque2();
+            $scope.getDestaque3();
+            $scope.getDestaque4();
         });
 
         $scope.getDetails = function(param) {
@@ -152,8 +168,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             $scope.getMarcaDetails(param);
             locationHref = window.location.href; 
         };
-
-        
 
         $scope.getMarcaDetails = function(param) {
             postKey = param;
@@ -173,9 +187,56 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             });
         };
 
-        $scope.atras = function() {
-            $scope.isMarcaList = true;
-            $scope.isMarcaDetails = false;
+        $scope.getDestaque1 = function() {
+            var record = $scope.marcasList.$getRecord("-KzxNFNOlUpNH5X-USfm");
+            $scope.destaque1 = record.marca;
+            fromDestaque1 = true;
+        }
+        $scope.getDestaque2 = function() {
+            var record = $scope.marcasList.$getRecord("-KyYRTAqW2Jkq0p9AvG8");
+            $scope.destaque2 = record.marca;
+            fromDestaque2 = true;
+        }
+        $scope.getDestaque3 = function() {
+            var record = $scope.marcasList.$getRecord("-KzIWjetlF1RSiKfd0hs");
+            $scope.destaque3 = record.marca;
+            fromDestaque3 = true;
+        }
+        $scope.getDestaque4 = function() {
+            var record = $scope.marcasList.$getRecord("-KzkawX0mzn1CISGzSSp");
+            $scope.destaque4 = record.marca;
+            fromDestaque4 = true;
+        }
+
+        $scope.atras = function(param) {
+            if (param == "1") {
+                //$window.location.assign('marcas/bebe-e-crianca');
+                $location.url('/marcas/bebe-e-crianca');
+            } else {
+                $scope.isMarcaList = true;
+                $scope.isMarcaDetails = false;
+            }
+            if (param == "2") {
+                //$window.location.assign('marcas/bebe-e-crianca');
+                $location.url('/eventos/empresas-de-organizaçao-de-eventos');
+            } else {
+                $scope.isMarcaList = true;
+                $scope.isMarcaDetails = false;
+            }
+            if (param == "3") {
+                //$window.location.assign('marcas/bebe-e-crianca');
+                $location.url('/marcas/tipicamente-portugues');
+            } else {
+                $scope.isMarcaList = true;
+                $scope.isMarcaDetails = false;
+            }
+            if (param == "4") {
+                //$window.location.assign('marcas/bebe-e-crianca');
+                $location.url('/marcas/joias-acessorios-malas');
+            } else {
+                $scope.isMarcaList = true;
+                $scope.isMarcaDetails = false;
+            }
             /* if (locationHref != null) {
                 $window.location.assign(locationHref);
             } else {

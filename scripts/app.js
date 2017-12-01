@@ -136,6 +136,27 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			templateUrl: 'views/sempre-festa.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
+		})
+		
+		.when('/destaque-1', {
+			templateUrl: 'views/destaque-1.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/destaque-2', {
+			templateUrl: 'views/destaque-2.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/destaque-3', {
+			templateUrl: 'views/destaque-3.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/destaque-4', {
+			templateUrl: 'views/destaque-4.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
         })
     .otherwise({
         redirectTo: '/'

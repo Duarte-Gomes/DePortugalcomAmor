@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="breadcrumbs clearfix">
+            <div class="col-sm-11 col-xs-10 hidden-xs">
+                <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras('4')">Joias, Acessórios e Malas</a>
+            </div>
+            <div class="col-sm-11 col-xs-10 visible-xs">
+                <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras('4')">Joias, Acessórios e Malas</a>
+            </div>
+            <div class="col-sm-1 col-xs-2">
+                <button class="no-class-button" ng-click="atras('4')"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="marca-detail-top">
+            <div class="col-sm-5 col-xs-6">
+                <img src="{{destaque4.logo}}" style="width: 100%; border: 1px solid black;">
+            </div>
+            <div class="col-sm-6">
+                <h1>{{destaque4.nome}}</h1>
+                <p>{{destaque4.categoria}}</p>
+                <p>{{destaque4.subCategoria}}</p>
+                <p>{{destaque4.desqPeq}}</p>
+                <p>{{destaque4.desqGeral}}</p>
+                <p ng-show="destaque4.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{destaque4.morada}}</p>
+                <p ng-show="destaque4.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{destaque4.localidade}}</p>
+                <p ng-show="destaque4.concelho"><i class="fa fa-map-marker icon-detail-place" aria-hidden="true"></i>{{destaque4.concelho}}</p>
+                <p ng-show="destaque4.telefone"><i class="fa fa-phone-square icon-detail" aria-hidden="true"></i>{{destaque4.telefone}}</p>
+                <p ng-show="destaque4.telemovel"><i class="fa fa-mobile icon-detail-mobile" aria-hidden="true"></i>{{destaque4.telemovel}}</p>
+                <p ng-show="destaque4.email"><i class="fa fa-envelope icon-detail" aria-hidden="true"></i>{{destaque4.email}}</p>
+                <a href="{{destaque4.website}}" target="_blank" ng-show="destaque4.website"><i class="fa fa-wifi brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque4.facebook}}" target="_blank" ng-show="destaque4.facebook"><i class="fa fa-facebook-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque4.instagram}}" target="_blank" ng-show="destaque4.instagram"><i class="fa fa-instagram brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque4.twitter}}" target="_blank" ng-show="destaque4.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque4.linkedin}}" target="_blank" ng-show="destaque4.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque4.googleplus}}" target="_blank" ng-show="destaque4.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="destaque4-detail-bottom clearfix">
+            <div class="col-sm-3">
+                <img src="{{destaque4.foto1}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque4.foto2}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque4.foto3}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque4.foto4}}" style="width: 100%">
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,57 @@
+<div class="container">
+    <div class="row">
+        <div class="breadcrumbs clearfix">
+            <div class="col-sm-11 col-xs-10 hidden-xs">
+                <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras('3')">Tipicamente Português</a>
+            </div>
+            <div class="col-sm-11 col-xs-10 visible-xs">
+                <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras('3')">Tipicamente Português</a>
+            </div>
+            <div class="col-sm-1 col-xs-2">
+                <button class="no-class-button" ng-click="atras('3')"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="marca-detail-top">
+            <div class="col-sm-5 col-xs-6">
+                <img src="{{destaque3.logo}}" style="width: 100%; border: 1px solid black;">
+            </div>
+            <div class="col-sm-6">
+                <h1>{{destaque3.nome}}</h1>
+                <p>{{destaque3.categoria}}</p>
+                <p>{{destaque3.subCategoria}}</p>
+                <p>{{destaque3.desqPeq}}</p>
+                <p>{{destaque3.desqGeral}}</p>
+                <p ng-show="destaque3.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{destaque3.morada}}</p>
+                <p ng-show="destaque3.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{destaque3.localidade}}</p>
+                <p ng-show="destaque3.concelho"><i class="fa fa-map-marker icon-detail-place" aria-hidden="true"></i>{{destaque3.concelho}}</p>
+                <p ng-show="destaque3.telefone"><i class="fa fa-phone-square icon-detail" aria-hidden="true"></i>{{destaque3.telefone}}</p>
+                <p ng-show="destaque3.telemovel"><i class="fa fa-mobile icon-detail-mobile" aria-hidden="true"></i>{{destaque3.telemovel}}</p>
+                <p ng-show="destaque3.email"><i class="fa fa-envelope icon-detail" aria-hidden="true"></i>{{destaque3.email}}</p>
+                <a href="{{destaque3.website}}" target="_blank" ng-show="destaque3.website"><i class="fa fa-wifi brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque3.facebook}}" target="_blank" ng-show="destaque3.facebook"><i class="fa fa-facebook-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque3.instagram}}" target="_blank" ng-show="destaque3.instagram"><i class="fa fa-instagram brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque3.twitter}}" target="_blank" ng-show="destaque3.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque3.linkedin}}" target="_blank" ng-show="destaque3.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
+                <a href="{{destaque3.googleplus}}" target="_blank" ng-show="destaque3.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+            </div>
+        </div>
+    </div>
+    <div class="row" style="margin-top: 30px;">
+        <div class="destaque3-detail-bottom clearfix">
+            <div class="col-sm-3">
+                <img src="{{destaque3.foto1}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque3.foto2}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque3.foto3}}" style="width: 100%">
+            </div>
+            <div class="col-sm-3">
+                <img src="{{destaque3.foto4}}" style="width: 100%">
+            </div>
+        </div>
+    </div>
+</div>

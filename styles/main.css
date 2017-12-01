@@ -16,8 +16,11 @@ div #mc_embed_signup_scroll label {
 .swiper-heigth-sm {
     height:415px;
 }
+.swiper-heigth-tb {
+    height:263px;
+}
 .swiper-heigth-xs {
-    height:146px;
+ 
 }
 /* breadcrumbs */
 .breadcrumbs {
@@ -96,7 +99,6 @@ div #mc_embed_signup_scroll label {
 /*navbar*/
 .navbar-brand {
     height: 120px;
-    float: left;
 }
 .nav-logo {
     height: 90px;
@@ -114,13 +116,16 @@ div #mc_embed_signup_scroll label {
     font-size: 18px;
 }
 .barra-2 {
-    width: 60%;
+    width: 63%;
 }
 .navbar-toggle {
     float: left;
     margin-right: 0;
     margin-left: 15px;
     margin-top: 15px;
+}
+.navbar-collapse{
+    padding: 0;
 }
 
 /*font awosome*/
@@ -214,7 +219,7 @@ div #mc_embed_signup_scroll label {
     background-size: cover; 
     background-position: center; 
     background-repeat: no-repeat;
-    height: calc(100vw / 3.5);
+    height: calc(100vw / 2.4);
 }
 .marca-prev-xs {
     border: 1px solid black;
@@ -241,7 +246,7 @@ div #mc_embed_signup_scroll label {
 }
 .subcategoria-style-lett-2 {
     color: white; 
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 0;
 }
 .marca-detail-top {
@@ -269,19 +274,72 @@ div #mc_embed_signup_scroll label {
     font-size: 35px;
     margin-right: 10px;
 }
+.brand-symbol-reel {
+    font-size: 100px;
+    color: black;
+}
 /*footer*/
 .footer-style {
     background-color: lightgrey;
     padding: 60px 0;
 }
-
-@media (min-width: 786px) {
+@media (min-width: 768px ) {
     .nav-ul-style-1 {
         margin-top: 30px;
     }
 }
-@media screen and (max-width: 767px) {
-    .back-marcas {
-        background-image: none;
+@media (min-width: 992px) and (max-width: 1199px){
+    .nav-ul-style-1 > li > a {
+        padding: 10px;
     }
+    .nav-ul-style-1 {
+        margin-top: 40px;
+    }
+    .categoria {
+        height: calc(100vw / 5);
+    }
+    .marca-prev-md {
+        height: calc(100vw / 3.5);
+    }
+    .swiper-heigth-sm {
+        height:100%;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px){
+    .nav-ul-style-1 {
+        margin-top: 40px;
+        font-size: 16px;
+    }
+    .nav-ul-style-1 > li > a {
+        padding: 5px;
+    }
+    .barra-2 {
+        width: 64%;
+    }
+    .categoria {
+        height: calc(100vw / 5);
+    }
+}
+@media (max-width: 767px ) {
+    .navbar-brand {
+        position: absolute;
+        left: 50%;
+        margin-left: -105px !important;
+        height: 120px;
+    }
+    .navbar-header {
+        height: 120px;
+    }
+    .navbar-collapse{
+        padding: 0 0 0 15px ;
+    }
+}
+@media (max-width: 767px ) and (orientation: landscape) {
+    .swiper-heigth-xs {
+        height: 305px;
+    }
+    .navbar-collapse{
+        padding: 0 0 0 15px ;
+    }
+    
 }
