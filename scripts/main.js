@@ -11,8 +11,8 @@ app.directive('fileModel',['$parse', function ($parse){
     }
 }]);
 
-app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'totalVisitCount', '$firebaseStorage', '$window', '$location',
-    function($scope, categoriasList, subCategoriasList, marcasList, totalVisitCount, $firebaseStorage, $window, $location) {
+app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'totalVisitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
+    function($scope, categoriasList, subCategoriasList, marcasList, totalVisitCount, $firebaseStorage, $window, $location, orderByFilter) {
 
         var postKey;
         var postKeyCount;
@@ -67,6 +67,8 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var fromDestaque4;
 
         var counterrr = 0;
+
+        var sortedJoiasList = [];
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -152,14 +154,36 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     if($scope.marcasList[i].marca.subCategoria === "Sempre em Festa (casamentos, batizados e muitos artigos)") {
                         $scope.festaList[contFesta] = $scope.marcasList[i];
                         contFesta++;
-                    }
+                    }        
                 }
             }
+               
+            
+            /* for (var ii = 0; ii < contJoias; ii++) {
+                $scope.testing.push($scope.joiasList[ii]);
+            }  */
+
+            for (var x in $scope.joiasList){
+                $scope.joiasList[x].newOrder = $scope.randomSort();
+                $scope.joiasList.hasOwnProperty(x) && sortedJoiasList.push($scope.joiasList[x])
+            }
+
+            $scope.sorting = "newOrder";
+            $scope.sortedJoiasList = sortedJoiasList;
+            console.log(sortedJoiasList)
+
             $scope.getDestaque1();
             $scope.getDestaque2();
             $scope.getDestaque3();
             $scope.getDestaque4();
         });
+        
+
+         
+            
+        $scope.randomSort = function() {
+            return Math.random();
+        };
 
         $scope.getDetails = function(param) {
             angular.element("html, body").animate({ scrollTop: 0 }, "fast");
