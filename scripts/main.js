@@ -182,67 +182,67 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                 $scope.bebeList[x].newOrder = $scope.randomSort();
                 $scope.bebeList.hasOwnProperty(x) && sortedBebeList.push($scope.bebeList[x])
             }
-            $scope.sortedbebeList = sortedBebeList;
+            $scope.sortedBebeList = sortedBebeList;
 
             for (var x in $scope.vestuarioList){
                 $scope.vestuarioList[x].newOrder = $scope.randomSort();
                 $scope.vestuarioList.hasOwnProperty(x) && sortedVestuarioList.push($scope.vestuarioList[x])
             }
-            $scope.sortedvestuarioList = sortedVestuarioList;
+            $scope.sortedVestuarioList = sortedVestuarioList;
 
             for (var x in $scope.animaisList){
                 $scope.animaisList[x].newOrder = $scope.randomSort();
                 $scope.animaisList.hasOwnProperty(x) && sortedAnimaisList.push($scope.animaisList[x])
             }
-            $scope.sortedanimaisList = sortedAnimaisList;
+            $scope.sortedAnimaisList = sortedAnimaisList;
 
             for (var x in $scope.ideiasList){
                 $scope.ideiasList[x].newOrder = $scope.randomSort();
                 $scope.ideiasList.hasOwnProperty(x) && sortedIdeiasList.push($scope.ideiasList[x])
             }
-            $scope.sortedideiasList = sortedIdeiasList;
+            $scope.sortedIdeiasList = sortedIdeiasList;
 
             for (var x in $scope.tipicamenteList){
                 $scope.tipicamenteList[x].newOrder = $scope.randomSort();
                 $scope.tipicamenteList.hasOwnProperty(x) && sortedTipicamenteList.push($scope.tipicamenteList[x])
             }
-            $scope.sortedtipicamenteList = sortedTipicamenteList;
+            $scope.sortedTipicamenteList = sortedTipicamenteList;
 
             for (var x in $scope.artesanatoList){
                 $scope.artesanatoList[x].newOrder = $scope.randomSort();
                 $scope.artesanatoList.hasOwnProperty(x) && sortedArtesanatoList.push($scope.artesanatoList[x])
             }
-            $scope.sortedartesanatoList = sortedArtesanatoList;
+            $scope.sortedArtesanatoList = sortedArtesanatoList;
 
             for (var x in $scope.decoracaoList){
                 $scope.decoracaoList[x].newOrder = $scope.randomSort();
                 $scope.decoracaoList.hasOwnProperty(x) && sortedDecoracaoList.push($scope.decoracaoList[x])
             }
-            $scope.sorteddecoracaoList = sortedDecoracaoList;
+            $scope.sortedDecoracaoList = sortedDecoracaoList;
 
             for (var x in $scope.eventosList){
                 $scope.eventosList[x].newOrder = $scope.randomSort();
                 $scope.eventosList.hasOwnProperty(x) && sortedEventosList.push($scope.eventosList[x])
             }
-            $scope.sortedeventosList = sortedEventosList;
+            $scope.sortedEventosList = sortedEventosList;
 
             for (var x in $scope.bolosList){
                 $scope.bolosList[x].newOrder = $scope.randomSort();
                 $scope.bolosList.hasOwnProperty(x) && sortedBolosList.push($scope.bolosList[x])
             }
-            $scope.sortedbolosList = sortedBolosList;
+            $scope.sortedBolosList = sortedBolosList;
 
             for (var x in $scope.fotografiaList){
                 $scope.fotografiaList[x].newOrder = $scope.randomSort();
                 $scope.fotografiaList.hasOwnProperty(x) && sortedFotografiaList.push($scope.fotografiaList[x])
             }
-            $scope.sortedfotografiaList = sortedFotografiaList;
+            $scope.sortedFotografiaList = sortedFotografiaList;
 
             for (var x in $scope.festaList){
                 $scope.festaList[x].newOrder = $scope.randomSort();
                 $scope.festaList.hasOwnProperty(x) && sortedFestaList.push($scope.festaList[x])
             }
-            $scope.sortedfestaList = sortedFestaList;
+            $scope.sortedFestaList = sortedFestaList;
 
             $scope.getDestaque1();
             $scope.getDestaque2();
