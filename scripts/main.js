@@ -158,11 +158,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                 }
             }
                
-            
-            /* for (var ii = 0; ii < contJoias; ii++) {
-                $scope.testing.push($scope.joiasList[ii]);
-            }  */
-
             for (var x in $scope.joiasList){
                 $scope.joiasList[x].newOrder = $scope.randomSort();
                 $scope.joiasList.hasOwnProperty(x) && sortedJoiasList.push($scope.joiasList[x])
@@ -177,9 +172,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             $scope.getDestaque3();
             $scope.getDestaque4();
         });
-        
-
-         
             
         $scope.randomSort = function() {
             return Math.random();
