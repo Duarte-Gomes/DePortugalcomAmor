@@ -69,6 +69,18 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var counterrr = 0;
 
         var sortedJoiasList = [];
+        var joiasList = [];
+        var sortedBebeList = [];
+        var sortedVestuarioList = [];
+        var sortedAnimaisList = [];
+        var sortedIdeiasList = [];
+        var sortedTipicamenteList = [];
+        var sortedArtesanatoList = [];
+        var sortedDecoracaoList = [];
+        var sortedEventosList = [];
+        var sortedBolosList = [];
+        var sortedFotografiaList = [];
+        var sortedFestaList = [];
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -157,15 +169,80 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     }        
                 }
             }
-               
+
+            $scope.sorting = "newOrder";
+
             for (var x in $scope.joiasList){
                 $scope.joiasList[x].newOrder = $scope.randomSort();
                 $scope.joiasList.hasOwnProperty(x) && sortedJoiasList.push($scope.joiasList[x])
             }
-
-            $scope.sorting = "newOrder";
             $scope.sortedJoiasList = sortedJoiasList;
-            console.log(sortedJoiasList)
+
+            for (var x in $scope.bebeList){
+                $scope.bebeList[x].newOrder = $scope.randomSort();
+                $scope.bebeList.hasOwnProperty(x) && sortedBebeList.push($scope.bebeList[x])
+            }
+            $scope.sortedbebeList = sortedBebeList;
+
+            for (var x in $scope.vestuarioList){
+                $scope.vestuarioList[x].newOrder = $scope.randomSort();
+                $scope.vestuarioList.hasOwnProperty(x) && sortedVestuarioList.push($scope.vestuarioList[x])
+            }
+            $scope.sortedvestuarioList = sortedVestuarioList;
+
+            for (var x in $scope.animaisList){
+                $scope.animaisList[x].newOrder = $scope.randomSort();
+                $scope.animaisList.hasOwnProperty(x) && sortedAnimaisList.push($scope.animaisList[x])
+            }
+            $scope.sortedanimaisList = sortedAnimaisList;
+
+            for (var x in $scope.ideiasList){
+                $scope.ideiasList[x].newOrder = $scope.randomSort();
+                $scope.ideiasList.hasOwnProperty(x) && sortedIdeiasList.push($scope.ideiasList[x])
+            }
+            $scope.sortedideiasList = sortedIdeiasList;
+
+            for (var x in $scope.tipicamenteList){
+                $scope.tipicamenteList[x].newOrder = $scope.randomSort();
+                $scope.tipicamenteList.hasOwnProperty(x) && sortedTipicamenteList.push($scope.tipicamenteList[x])
+            }
+            $scope.sortedtipicamenteList = sortedTipicamenteList;
+
+            for (var x in $scope.artesanatoList){
+                $scope.artesanatoList[x].newOrder = $scope.randomSort();
+                $scope.artesanatoList.hasOwnProperty(x) && sortedArtesanatoList.push($scope.artesanatoList[x])
+            }
+            $scope.sortedartesanatoList = sortedArtesanatoList;
+
+            for (var x in $scope.decoracaoList){
+                $scope.decoracaoList[x].newOrder = $scope.randomSort();
+                $scope.decoracaoList.hasOwnProperty(x) && sortedDecoracaoList.push($scope.decoracaoList[x])
+            }
+            $scope.sorteddecoracaoList = sortedDecoracaoList;
+
+            for (var x in $scope.eventosList){
+                $scope.eventosList[x].newOrder = $scope.randomSort();
+                $scope.eventosList.hasOwnProperty(x) && sortedEventosList.push($scope.eventosList[x])
+            }
+            $scope.sortedeventosList = sortedEventosList;
+
+            for (var x in $scope.bolosList){
+                $scope.bolosList[x].newOrder = $scope.randomSort();
+                $scope.bolosList.hasOwnProperty(x) && sortedBolosList.push($scope.bolosList[x])
+            }
+            $scope.sortedbolosList = sortedBolosList;
+
+            for (var x in $scope.fotografiaList){
+                $scope.fotografiaList[x].newOrder = $scope.randomSort();
+                $scope.fotografiaList.hasOwnProperty(x) && sortedFotografiaList.push($scope.fotografiaList[x])
+            }
+            $scope.sortedfotografiaList = sortedFotografiaList;
+
+            for (var x in $scope.festaList){
+                $scope.festaList[x].newOrder = $scope.randomSort();
+                $scope.festaList.hasOwnProperty(x) && sortedFestaList.push($scope.festaList[x])
+            }
+            $scope.sortedfestaList = sortedFestaList;
 
             $scope.getDestaque1();
             $scope.getDestaque2();
