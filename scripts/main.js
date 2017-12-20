@@ -40,6 +40,9 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.bolosList = {};
         $scope.fotografiaList = {};
         $scope.festaList = {};
+        $scope.chocolateList = {};
+        $scope.aperitivosList = {};
+        $scope.patesList = {};
 
         $scope.totalVisitCount = {};
         $scope.totalCounter = 0;
@@ -60,6 +63,9 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var contBolos = 0;
         var contFotografia = 0;
         var contFesta = 0;
+        var contAperitivos = 0;
+        var contChocolate = 0;
+        var contPates = 0;
 
         var fromDestaque1;
         var fromDestaque2;
@@ -81,6 +87,9 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedBolosList = [];
         var sortedFotografiaList = [];
         var sortedFestaList = [];
+        var sortedAperitivosList = [];
+        var sortedChocolateList = [];
+        var sortedPatesList = [];
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -166,7 +175,19 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     if($scope.marcasList[i].marca.subCategoria === "Sempre em Festa (casamentos, batizados e muitos artigos)") {
                         $scope.festaList[contFesta] = $scope.marcasList[i];
                         contFesta++;
-                    }        
+                    }    
+                    if($scope.marcasList[i].marca.subCategoria === "Aperitivos Doces e Salgados") {
+                        $scope.aperitivosList[contAperitivos] = $scope.marcasList[i];
+                        contAperitivos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Chocolates e outros doces") {
+                        $scope.chocolateList[contChocolate] = $scope.marcasList[i];
+                        contChocolate++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Patés e conservas") {
+                        $scope.patesList[contPates] = $scope.marcasList[i];
+                        contPates++;
+                    }      
                 }
             }
 
@@ -243,6 +264,24 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                 $scope.festaList.hasOwnProperty(x) && sortedFestaList.push($scope.festaList[x])
             }
             $scope.sortedFestaList = sortedFestaList;
+
+            for (var x in $scope.aperitivosList){
+                $scope.aperitivosList[x].newOrder = $scope.randomSort();
+                $scope.aperitivosList.hasOwnProperty(x) && sortedAperitivosList.push($scope.aperitivosList[x])
+            }
+            $scope.sortedAperitivosList = sortedAperitivosList;
+
+            for (var x in $scope.chocolateList){
+                $scope.chocolateList[x].newOrder = $scope.randomSort();
+                $scope.chocolateList.hasOwnProperty(x) && sortedChocolateList.push($scope.chocolateList[x])
+            }
+            $scope.sortedChocolateList = sortedChocolateList;
+
+            for (var x in $scope.patesList){
+                $scope.patesList[x].newOrder = $scope.randomSort();
+                $scope.patesList.hasOwnProperty(x) && sortedPatesList.push($scope.patesList[x])
+            }
+            $scope.sortedPatesList = sortedPatesList;
 
             $scope.getDestaque1();
             $scope.getDestaque2();

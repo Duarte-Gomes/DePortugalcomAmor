@@ -75,6 +75,11 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
+		.when('/gastronomia', {
+			templateUrl: 'views/subgastronomia.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
 		
         .when('/marcas/joias-acessorios-malas', {
 			templateUrl: 'views/joias-acessorios-malas.html',
@@ -132,8 +137,24 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-		.when('/eventos/sempre-em-festa', {
-			templateUrl: 'views/sempre-festa.html',
+		.when('/eventos/pates-e-conservas', {
+			templateUrl: 'views/pates-conservas.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+
+		.when('/gastronomia/aperitivos', {
+			templateUrl: 'views/aperitivos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/chocolates-e-doces', {
+			templateUrl: 'views/chocolate-doces.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/servico-de-fotografia-e-video', {
+			templateUrl: 'views/fotografia-video.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
