@@ -137,12 +137,12 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-		.when('/eventos/pates-e-conservas', {
+
+		.when('/gastronomia/pates-e-conservas', {
 			templateUrl: 'views/pates-conservas.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-
 		.when('/gastronomia/aperitivos', {
 			templateUrl: 'views/aperitivos.html',
 			controller: 'MainCtrl',
@@ -153,11 +153,7 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-		.when('/gastronomia/servico-de-fotografia-e-video', {
-			templateUrl: 'views/fotografia-video.html',
-			controller: 'MainCtrl',
-			controllerAs: 'main'
-		})
+		
 		
 		.when('/destaque-1', {
 			templateUrl: 'views/destaque-1.html',
