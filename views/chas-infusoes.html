@@ -12,10 +12,10 @@
                 </div>
             </div>
             <div class="row">
-                <h2 class="text-center font-hand-title">Patés e Conservas</h2>
+                <h2 class="text-center font-hand-title">Chás e Infusões</h2>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedPatesList | orderBy:sorting">
+                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedChasList | orderBy:sorting">
                     <a class="to-top" ng-click="getDetails(item.$id)">
                         <div class="marca-prev hidden-md hidden-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
@@ -43,10 +43,10 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 col-xs-10 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Patés e Conservas</a>
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Chás e Infusões</a>
                     </div>
                     <div class="col-sm-11 col-xs-10 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Patés e Conservas</a>
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Chás e Infusões</a>
                     </div>
                     <div class="col-sm-1 col-xs-2">
                         <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>

@@ -138,8 +138,18 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controllerAs: 'main'
 		})
 
+		.when('/gastronomia/chocolates-e-doces', {
+			templateUrl: 'views/chocolate-doces.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
 		.when('/gastronomia/pates-e-conservas', {
 			templateUrl: 'views/pates-conservas.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/vinhos-e-licores', {
+			templateUrl: 'views/vinhos-licores.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
@@ -148,12 +158,21 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-		.when('/gastronomia/chocolates-e-doces', {
-			templateUrl: 'views/chocolate-doces.html',
+		.when('/gastronomia/queijos-e-enchidos', {
+			templateUrl: 'views/queijos-enchidos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
-		
+		.when('/gastronomia/chas-e-infusoes', {
+			templateUrl: 'views/chas-infusoes.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/especiarias-e-temperos', {
+			templateUrl: 'views/especiarias-temperos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
 		
 		.when('/destaque-1', {
 			templateUrl: 'views/destaque-1.html',

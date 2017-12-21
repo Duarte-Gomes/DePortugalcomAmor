@@ -43,6 +43,10 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.chocolateList = {};
         $scope.aperitivosList = {};
         $scope.patesList = {};
+        $scope.vinhosList = {};
+        $scope.chasList = {};
+        $scope.especiariasList = {};
+        $scope.queijosList = {};
 
         $scope.totalVisitCount = {};
         $scope.totalCounter = 0;
@@ -66,6 +70,10 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var contAperitivos = 0;
         var contChocolate = 0;
         var contPates = 0;
+        var contVinhos = 0;
+        var contChas = 0;
+        var contEspeciarias = 0;
+        var contQueijos = 0;
 
         var fromDestaque1;
         var fromDestaque2;
@@ -90,6 +98,10 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedAperitivosList = [];
         var sortedChocolateList = [];
         var sortedPatesList = [];
+        var sortedVinhosList = [];
+        var sortedChasList = [];
+        var sortedEspeciariasList = [];
+        var sortedQueijosList = [];
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -180,14 +192,30 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                         $scope.aperitivosList[contAperitivos] = $scope.marcasList[i];
                         contAperitivos++;
                     }  
-                    if($scope.marcasList[i].marca.subCategoria === "Chocolates e outros doces") {
+                    if($scope.marcasList[i].marca.subCategoria === "Chocolates, doces e compotas") {
                         $scope.chocolateList[contChocolate] = $scope.marcasList[i];
                         contChocolate++;
                     }  
                     if($scope.marcasList[i].marca.subCategoria === "Patés e conservas") {
                         $scope.patesList[contPates] = $scope.marcasList[i];
                         contPates++;
-                    }      
+                    }    
+                    if($scope.marcasList[i].marca.subCategoria === "Vinhos e licores") {
+                        $scope.vinhosList[contVinhos] = $scope.marcasList[i];
+                        contVinhos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Queijos e enchidos") {
+                        $scope.queijosList[contQueijos] = $scope.marcasList[i];
+                        contQueijos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Chás e infusões") {
+                        $scope.chasList[contChas] = $scope.marcasList[i];
+                        contPates++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Especiarias e outros temperos") {
+                        $scope.especiariasList[contEspeciarias] = $scope.marcasList[i];
+                        contEspeciarias++;
+                    }    
                 }
             }
 
@@ -283,6 +311,30 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             }
             $scope.sortedPatesList = sortedPatesList;
 
+            for (var x in $scope.vinhosList){
+                $scope.vinhosList[x].newOrder = $scope.randomSort();
+                $scope.vinhosList.hasOwnProperty(x) && sortedVinhosList.push($scope.vinhosList[x])
+            }
+            $scope.sortedVinhosList = sortedVinhosList;
+
+            for (var x in $scope.chasList){
+                $scope.chasList[x].newOrder = $scope.randomSort();
+                $scope.chasList.hasOwnProperty(x) && sortedChasList.push($scope.chasList[x])
+            }
+            $scope.sortedChasList = sortedChasList;
+
+            for (var x in $scope.especiariasList){
+                $scope.especiariasList[x].newOrder = $scope.randomSort();
+                $scope.especiariasList.hasOwnProperty(x) && sortedEspeciariasList.push($scope.especiariasList[x])
+            }
+            $scope.sortedEspeciariasList = sortedEspeciariasList;
+
+            for (var x in $scope.queijosList){
+                $scope.queijosList[x].newOrder = $scope.randomSort();
+                $scope.queijosList.hasOwnProperty(x) && sortedQueijosList.push($scope.queijosList[x])
+            }
+            $scope.sortedQueijosList = sortedQueijosList;
+
             $scope.getDestaque1();
             $scope.getDestaque2();
             $scope.getDestaque3();
@@ -314,7 +366,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             }   
             
             $scope.marcasList.$save(postIdx).then(function() {
-                //$scope.getFirstPostDetails(postKey); 
                 console.log ($scope.marca) 
             });
         };
@@ -342,28 +393,24 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
 
         $scope.atras = function(param) {
             if (param == "1") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/bebe-e-crianca');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "2") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/eventos/empresas-de-organizaçao-de-eventos');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "3") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/tipicamente-portugues');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "4") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/joias-acessorios-malas');
             } else {
                 $scope.isMarcaList = true;
