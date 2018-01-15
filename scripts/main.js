@@ -188,11 +188,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                         $scope.festaList[contFesta] = $scope.marcasList[i];
                         contFesta++;
                     }    
-<<<<<<< HEAD
-                    if($scope.marcasList[i].marca.subCategoria === "Aperitivos Doces ou Salgados") {
-=======
                     if($scope.marcasList[i].marca.subCategoria === "Aperitivos Doces e Salgados") {
->>>>>>> 4b70933a8b63420e026f376839b1c2aef54d3a7b
                         $scope.aperitivosList[contAperitivos] = $scope.marcasList[i];
                         contAperitivos++;
                     }  
