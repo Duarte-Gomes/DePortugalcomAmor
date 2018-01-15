@@ -137,6 +137,11 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
+		.when('/eventos/sempre-em-festa', {
+			templateUrl: 'views/sempre-festa.html.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
 
 		.when('/gastronomia/chocolates-e-doces', {
 			templateUrl: 'views/chocolate-doces.html',
