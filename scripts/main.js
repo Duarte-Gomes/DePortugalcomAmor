@@ -381,7 +381,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             fromDestaque2 = true;
         }
         $scope.getDestaque3 = function() {
-            var record = $scope.marcasList.$getRecord("-KzIWjetlF1RSiKfd0hs");
+            var record = $scope.marcasList.$getRecord("-L2Hf0T0j1uIGB4HOG2P");
             $scope.destaque3 = record.marca;
             fromDestaque3 = true;
         }
