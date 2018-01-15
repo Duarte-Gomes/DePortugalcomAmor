@@ -40,6 +40,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.bolosList = {};
         $scope.fotografiaList = {};
         $scope.festaList = {};
+        $scope.chocolateList = {};
+        $scope.aperitivosList = {};
+        $scope.patesList = {};
+        $scope.vinhosList = {};
+        $scope.chasList = {};
+        $scope.especiariasList = {};
+        $scope.queijosList = {};
 
         $scope.totalVisitCount = {};
         $scope.totalCounter = 0;
@@ -60,6 +67,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var contBolos = 0;
         var contFotografia = 0;
         var contFesta = 0;
+        var contAperitivos = 0;
+        var contChocolate = 0;
+        var contPates = 0;
+        var contVinhos = 0;
+        var contChas = 0;
+        var contEspeciarias = 0;
+        var contQueijos = 0;
 
         var fromDestaque1;
         var fromDestaque2;
@@ -81,6 +95,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedBolosList = [];
         var sortedFotografiaList = [];
         var sortedFestaList = [];
+        var sortedAperitivosList = [];
+        var sortedChocolateList = [];
+        var sortedPatesList = [];
+        var sortedVinhosList = [];
+        var sortedChasList = [];
+        var sortedEspeciariasList = [];
+        var sortedQueijosList = [];
 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
@@ -166,7 +187,35 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                     if($scope.marcasList[i].marca.subCategoria === "Sempre em Festa (casamentos, batizados e muitos artigos)") {
                         $scope.festaList[contFesta] = $scope.marcasList[i];
                         contFesta++;
-                    }        
+                    }    
+                    if($scope.marcasList[i].marca.subCategoria === "Aperitivos Doces ou Salgados") {
+                        $scope.aperitivosList[contAperitivos] = $scope.marcasList[i];
+                        contAperitivos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Chocolates, doces e compotas") {
+                        $scope.chocolateList[contChocolate] = $scope.marcasList[i];
+                        contChocolate++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Patés e conservas") {
+                        $scope.patesList[contPates] = $scope.marcasList[i];
+                        contPates++;
+                    }    
+                    if($scope.marcasList[i].marca.subCategoria === "Vinhos e licores") {
+                        $scope.vinhosList[contVinhos] = $scope.marcasList[i];
+                        contVinhos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Queijos e enchidos") {
+                        $scope.queijosList[contQueijos] = $scope.marcasList[i];
+                        contQueijos++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Chás e infusões") {
+                        $scope.chasList[contChas] = $scope.marcasList[i];
+                        contPates++;
+                    }  
+                    if($scope.marcasList[i].marca.subCategoria === "Especiarias e outros temperos") {
+                        $scope.especiariasList[contEspeciarias] = $scope.marcasList[i];
+                        contEspeciarias++;
+                    }    
                 }
             }
 
@@ -182,67 +231,109 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                 $scope.bebeList[x].newOrder = $scope.randomSort();
                 $scope.bebeList.hasOwnProperty(x) && sortedBebeList.push($scope.bebeList[x])
             }
-            $scope.sortedbebeList = sortedBebeList;
+            $scope.sortedBebeList = sortedBebeList;
 
             for (var x in $scope.vestuarioList){
                 $scope.vestuarioList[x].newOrder = $scope.randomSort();
                 $scope.vestuarioList.hasOwnProperty(x) && sortedVestuarioList.push($scope.vestuarioList[x])
             }
-            $scope.sortedvestuarioList = sortedVestuarioList;
+            $scope.sortedVestuarioList = sortedVestuarioList;
 
             for (var x in $scope.animaisList){
                 $scope.animaisList[x].newOrder = $scope.randomSort();
                 $scope.animaisList.hasOwnProperty(x) && sortedAnimaisList.push($scope.animaisList[x])
             }
-            $scope.sortedanimaisList = sortedAnimaisList;
+            $scope.sortedAnimaisList = sortedAnimaisList;
 
             for (var x in $scope.ideiasList){
                 $scope.ideiasList[x].newOrder = $scope.randomSort();
                 $scope.ideiasList.hasOwnProperty(x) && sortedIdeiasList.push($scope.ideiasList[x])
             }
-            $scope.sortedideiasList = sortedIdeiasList;
+            $scope.sortedIdeiasList = sortedIdeiasList;
 
             for (var x in $scope.tipicamenteList){
                 $scope.tipicamenteList[x].newOrder = $scope.randomSort();
                 $scope.tipicamenteList.hasOwnProperty(x) && sortedTipicamenteList.push($scope.tipicamenteList[x])
             }
-            $scope.sortedtipicamenteList = sortedTipicamenteList;
+            $scope.sortedTipicamenteList = sortedTipicamenteList;
 
             for (var x in $scope.artesanatoList){
                 $scope.artesanatoList[x].newOrder = $scope.randomSort();
                 $scope.artesanatoList.hasOwnProperty(x) && sortedArtesanatoList.push($scope.artesanatoList[x])
             }
-            $scope.sortedartesanatoList = sortedArtesanatoList;
+            $scope.sortedArtesanatoList = sortedArtesanatoList;
 
             for (var x in $scope.decoracaoList){
                 $scope.decoracaoList[x].newOrder = $scope.randomSort();
                 $scope.decoracaoList.hasOwnProperty(x) && sortedDecoracaoList.push($scope.decoracaoList[x])
             }
-            $scope.sorteddecoracaoList = sortedDecoracaoList;
+            $scope.sortedDecoracaoList = sortedDecoracaoList;
 
             for (var x in $scope.eventosList){
                 $scope.eventosList[x].newOrder = $scope.randomSort();
                 $scope.eventosList.hasOwnProperty(x) && sortedEventosList.push($scope.eventosList[x])
             }
-            $scope.sortedeventosList = sortedEventosList;
+            $scope.sortedEventosList = sortedEventosList;
 
             for (var x in $scope.bolosList){
                 $scope.bolosList[x].newOrder = $scope.randomSort();
                 $scope.bolosList.hasOwnProperty(x) && sortedBolosList.push($scope.bolosList[x])
             }
-            $scope.sortedbolosList = sortedBolosList;
+            $scope.sortedBolosList = sortedBolosList;
 
             for (var x in $scope.fotografiaList){
                 $scope.fotografiaList[x].newOrder = $scope.randomSort();
                 $scope.fotografiaList.hasOwnProperty(x) && sortedFotografiaList.push($scope.fotografiaList[x])
             }
-            $scope.sortedfotografiaList = sortedFotografiaList;
+            $scope.sortedFotografiaList = sortedFotografiaList;
 
             for (var x in $scope.festaList){
                 $scope.festaList[x].newOrder = $scope.randomSort();
                 $scope.festaList.hasOwnProperty(x) && sortedFestaList.push($scope.festaList[x])
             }
-            $scope.sortedfestaList = sortedFestaList;
+            $scope.sortedFestaList = sortedFestaList;
+
+            for (var x in $scope.aperitivosList){
+                $scope.aperitivosList[x].newOrder = $scope.randomSort();
+                $scope.aperitivosList.hasOwnProperty(x) && sortedAperitivosList.push($scope.aperitivosList[x])
+            }
+            $scope.sortedAperitivosList = sortedAperitivosList;
+
+            for (var x in $scope.chocolateList){
+                $scope.chocolateList[x].newOrder = $scope.randomSort();
+                $scope.chocolateList.hasOwnProperty(x) && sortedChocolateList.push($scope.chocolateList[x])
+            }
+            $scope.sortedChocolateList = sortedChocolateList;
+
+            for (var x in $scope.patesList){
+                $scope.patesList[x].newOrder = $scope.randomSort();
+                $scope.patesList.hasOwnProperty(x) && sortedPatesList.push($scope.patesList[x])
+            }
+            $scope.sortedPatesList = sortedPatesList;
+
+            for (var x in $scope.vinhosList){
+                $scope.vinhosList[x].newOrder = $scope.randomSort();
+                $scope.vinhosList.hasOwnProperty(x) && sortedVinhosList.push($scope.vinhosList[x])
+            }
+            $scope.sortedVinhosList = sortedVinhosList;
+
+            for (var x in $scope.chasList){
+                $scope.chasList[x].newOrder = $scope.randomSort();
+                $scope.chasList.hasOwnProperty(x) && sortedChasList.push($scope.chasList[x])
+            }
+            $scope.sortedChasList = sortedChasList;
+
+            for (var x in $scope.especiariasList){
+                $scope.especiariasList[x].newOrder = $scope.randomSort();
+                $scope.especiariasList.hasOwnProperty(x) && sortedEspeciariasList.push($scope.especiariasList[x])
+            }
+            $scope.sortedEspeciariasList = sortedEspeciariasList;
+
+            for (var x in $scope.queijosList){
+                $scope.queijosList[x].newOrder = $scope.randomSort();
+                $scope.queijosList.hasOwnProperty(x) && sortedQueijosList.push($scope.queijosList[x])
+            }
+            $scope.sortedQueijosList = sortedQueijosList;
 
             $scope.getDestaque1();
             $scope.getDestaque2();
@@ -275,18 +366,17 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             }   
             
             $scope.marcasList.$save(postIdx).then(function() {
-                //$scope.getFirstPostDetails(postKey); 
                 console.log ($scope.marca) 
             });
         };
 
         $scope.getDestaque1 = function() {
-            var record = $scope.marcasList.$getRecord("-KzxNFNOlUpNH5X-USfm");
+            var record = $scope.marcasList.$getRecord("-L-HLTolw3Zns4kBqq1F");
             $scope.destaque1 = record.marca;
             fromDestaque1 = true;
         }
         $scope.getDestaque2 = function() {
-            var record = $scope.marcasList.$getRecord("-KyYRTAqW2Jkq0p9AvG8");
+            var record = $scope.marcasList.$getRecord("-Kz9FKzrMwKYauRRX3ni");
             $scope.destaque2 = record.marca;
             fromDestaque2 = true;
         }
@@ -296,35 +386,31 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             fromDestaque3 = true;
         }
         $scope.getDestaque4 = function() {
-            var record = $scope.marcasList.$getRecord("-KzkawX0mzn1CISGzSSp");
+            var record = $scope.marcasList.$getRecord("-L0KF7dFRW_aZE91Z-gC");
             $scope.destaque4 = record.marca;
             fromDestaque4 = true;
         }
 
         $scope.atras = function(param) {
             if (param == "1") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/bebe-e-crianca');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "2") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/eventos/empresas-de-organizaçao-de-eventos');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "3") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/tipicamente-portugues');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "4") {
-                //$window.location.assign('marcas/bebe-e-crianca');
                 $location.url('/marcas/joias-acessorios-malas');
             } else {
                 $scope.isMarcaList = true;

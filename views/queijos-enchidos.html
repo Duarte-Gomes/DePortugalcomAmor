@@ -1,0 +1,100 @@
+<div class="container">
+    <div class="">
+        <div ng-show="isMarcaList">
+            <div class="row">
+                <div class="breadcrumbs clearfix">
+                    <div class="col-sm-11 hidden-xs">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a>
+                    </div>  
+                    <div class="col-sm-11 visible-xs">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a>
+                    </div>                       
+                </div>
+            </div>
+            <div class="row">
+                <h2 class="text-center font-hand-title">Queijos e enchidos</h2>
+            </div>
+            <div class="row">
+                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedQueijosList | orderBy:sorting">
+                    <a class="to-top" ng-click="getDetails(item.$id)">
+                        <div class="marca-prev hidden-md hidden-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
+                            <div class="subcategoria-style">
+                                <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
+                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                            </div>
+                        </div>
+                        <div class="marca-prev-md visible-md visible-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
+                            <div class="subcategoria-style">
+                                <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
+                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                            </div>
+                        </div>
+                        <div class="marca-prev-xs visible-xs" style="background-image: url({{item.marca.foto1}});">
+                            <div class="subcategoria-style">
+                                <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
+                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div> <!-- isMarcaList -->
+        <div ng-show="isMarcaDetails">
+            <div class="row">
+                <div class="breadcrumbs clearfix">
+                    <div class="col-sm-11 col-xs-10 hidden-xs">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Queijos e enchidos</a>
+                    </div>
+                    <div class="col-sm-11 col-xs-10 visible-xs">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Queijos e enchidos</a>
+                    </div>
+                    <div class="col-sm-1 col-xs-2">
+                        <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="marca-detail-top">
+                    <div class="col-sm-5 col-xs-6">
+                        <img src="{{marca.logo}}" style="width: 100%; border: 1px solid black;">
+                    </div>
+                    <div class="col-sm-6">
+                        <h1>{{marca.nome}}</h1>
+                        <p>{{marca.categoria}}</p>
+                        <p>{{marca.subCategoria}}</p>
+                        <p>{{marca.desqPeq}}</p>
+                        <p>{{marca.desqGeral}}</p>
+                        <p ng-show="marca.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{marca.morada}}</p>
+                        <p ng-show="marca.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{marca.localidade}}</p>
+                        <p ng-show="marca.concelho"><i class="fa fa-map-marker icon-detail-place" aria-hidden="true"></i>{{marca.concelho}}</p>
+                        <p ng-show="marca.telefone"><i class="fa fa-phone-square icon-detail" aria-hidden="true"></i>{{marca.telefone}}</p>
+                        <p ng-show="marca.telemovel"><i class="fa fa-mobile icon-detail-mobile" aria-hidden="true"></i>{{marca.telemovel}}</p>
+                        <p ng-show="marca.email"><i class="fa fa-envelope icon-detail" aria-hidden="true"></i>{{marca.email}}</p>
+                        <a href="{{marca.website}}" target="_blank" ng-show="marca.website"><i class="fa fa-wifi brand-symbol" aria-hidden="true"></i></a>
+                        <a href="{{marca.facebook}}" target="_blank" ng-show="marca.facebook"><i class="fa fa-facebook-square brand-symbol" aria-hidden="true"></i></a>
+                        <a href="{{marca.instagram}}" target="_blank" ng-show="marca.instagram"><i class="fa fa-instagram brand-symbol" aria-hidden="true"></i></a>
+                        <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
+                        <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
+                        <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+                    </div>
+                </div>
+            </div>
+            <div class="row" style="margin-top: 30px;">
+                <div class="marca-detail-bottom clearfix">
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto1}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto2}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto3}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto4}}" style="width: 100%">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

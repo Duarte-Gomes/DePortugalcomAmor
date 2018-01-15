@@ -75,6 +75,11 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
+		.when('/gastronomia', {
+			templateUrl: 'views/subgastronomia.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
 		
         .when('/marcas/joias-acessorios-malas', {
 			templateUrl: 'views/joias-acessorios-malas.html',
@@ -134,6 +139,42 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 		})
 		.when('/eventos/sempre-em-festa', {
 			templateUrl: 'views/sempre-festa.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+
+		.when('/gastronomia/chocolates-e-doces', {
+			templateUrl: 'views/chocolates-doces.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/pates-e-conservas', {
+			templateUrl: 'views/pates-conservas.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/vinhos-e-licores', {
+			templateUrl: 'views/vinhos-licores.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/aperitivos', {
+			templateUrl: 'views/aperitivos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/queijos-e-enchidos', {
+			templateUrl: 'views/queijos-enchidos.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/chas-e-infusoes', {
+			templateUrl: 'views/chas-infusoes.html',
+			controller: 'MainCtrl',
+			controllerAs: 'main'
+		})
+		.when('/gastronomia/especiarias-e-temperos', {
+			templateUrl: 'views/especiarias-temperos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
