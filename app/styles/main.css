@@ -127,6 +127,11 @@ div #mc_embed_signup_scroll label {
 .navbar-collapse{
     padding: 0;
 }
+#google_translate_element {
+    float: right;
+    margin-right: 15px;
+    margin-top: 45px;
+}
 
 /*font awosome*/
 .fa-pencil-square {

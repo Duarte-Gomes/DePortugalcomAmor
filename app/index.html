@@ -44,6 +44,15 @@
     
 </head>
 <body ng-app="DePortugalcomAmorApp" class="ng-cloak">
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/pt_PT/sdk.js#xfbml=1&version=v2.11&appId=418141965048790';
+        fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
     <nav class="navbar navbar-default">
         <div class="container">
             <!-- Brand and toggle get grouped for better mobile display -->
@@ -66,10 +75,15 @@
                 </ul>  
                 <ul class="nav navbar-nav navbar-right nav-ul-style-2 barra-2 hidden-xs">
                     <a class="navbar-brand" href="/"><img class="nav-logo" src="./images/logo.jpg"></a>
+                    <div id="google_translate_element"></div>
+                    <script type="text/javascript">
+                        function googleTranslateElementInit() {
+                            new google.translate.TranslateElement({pageLanguage: 'pt', includedLanguages: 'en,pt', layout: google.translate.TranslateElement.FloatPosition.TOP_LEFT}, 'google_translate_element');
+                        }
+                    </script>
+                    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                 </ul>  
             </div><!-- /.navbar-collapse -->
-           
-               
            
         </div>
     </nav>
@@ -103,6 +117,8 @@
                         <p>Obrigado pela sua visita!</p>
                         <p>Total de visitantes: <span id="counterrr"></span></p>
                     </div>
+                    
+        
                 </div>
                 <div class="col-sm-6">
                     <p class="text-center" style="margin-bottom: 0; font-size: 16px; font-weight: bold;">Tem uma marca e quer juntar-se a nós?</p>
