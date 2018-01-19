@@ -132,7 +132,11 @@ div #mc_embed_signup_scroll label {
     margin-right: 15px;
     margin-top: 45px;
 }
-
+.google-xs {
+    float: left !important;
+    margin-top: 0 !important;
+    padding: 6px 15px;
+}
 /*font awosome*/
 .fa-pencil-square {
     font-size: 25px;
