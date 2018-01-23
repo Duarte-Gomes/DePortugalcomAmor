@@ -19,12 +19,20 @@ app.factory("marcasList", ["$firebaseArray",
     }
 ]);
 
-app.factory("totalVisitCount", ["$firebaseArray",
+/* app.factory("totalVisitCount", ["$firebaseArray",
     function($firebaseArray) {
         var ref = firebase.database().ref('TotalVisitCount');
         return $firebaseArray(ref);
     }
+]); */
+
+app.factory("visitCount", ["$firebaseArray",
+    function($firebaseArray) {
+        var ref = firebase.database().ref('visitCount');
+        return $firebaseArray(ref);
+    }
 ]);
+
 /* app.factory("Auth", ["$firebaseAuth",
     function($firebaseAuth) {
         return $firebaseAuth();

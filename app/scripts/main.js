@@ -11,8 +11,8 @@ app.directive('fileModel',['$parse', function ($parse){
     }
 }]);
 
-app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'totalVisitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
-    function($scope, categoriasList, subCategoriasList, marcasList, totalVisitCount, $firebaseStorage, $window, $location, orderByFilter) {
+app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'visitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
+    function($scope, categoriasList, subCategoriasList, marcasList, visitCount, $firebaseStorage, $window, $location, orderByFilter) {
 
         var postKey;
         var postKeyCount;
@@ -27,7 +27,9 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.categoriasList = {};
         $scope.subCategoriasList = {};
         $scope.marcasList = {};
-
+        $scope.totalVisitCount = {};
+        $scope.visitCount = {};
+            
         $scope.joiasList = {};
         $scope.bebeList = {};
         $scope.vestuarioList = {};
@@ -48,7 +50,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         $scope.especiariasList = {};
         $scope.queijosList = {};
 
-        $scope.totalVisitCount = {};
         $scope.totalCounter = 0;
         
         $scope.marca = {};
@@ -103,6 +104,60 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedEspeciariasList = [];
         var sortedQueijosList = [];
 
+
+
+
+
+
+
+
+
+        visitCount.$loaded().then(function() {
+            $scope.visitCount = visitCount;
+
+            if ($scope.visitCount.length === 0) {
+                $scope.visitCount.$add({
+                    totalCount: 1,
+                    timestamp: firebase.database.ServerValue.TIMESTAMP
+                }).then(function() {
+                    var temp = $scope.visitCount.$keyAt(0);
+                    var record = $scope.visitCount.$getRecord(temp); 
+                }); 
+            } else {
+                for (var i = 0; i < 1; i++) {
+
+                    $scope.visitCount[i].totalCount++;
+                    
+                    counterrr = $scope.visitCount[i].totalCount;
+                    angular.element('#counterrr').html(counterrr);
+                }
+                $scope.visitCount.$save(0).then(function() {
+                    console.log("registo gravado!")            
+                })
+            }
+        });
+
+
+
+
+
+
+       /*  totalVisitCount.$loaded().then(function() {
+            $scope.totalVisitCount = totalVisitCount;
+
+            console.log($scope.totalVisitCount.length)
+        })
+
+ */
+
+
+
+
+
+
+
+
+/* 
         totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
 
@@ -133,7 +188,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             counterrr = $scope.totalVisitCount.length;
             angular.element('#counterrr').html(counterrr);
         });
-
+ */
         
         marcasList.$loaded().then(function() {  
             $scope.marcasList = marcasList;
