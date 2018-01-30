@@ -104,14 +104,6 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedEspeciariasList = [];
         var sortedQueijosList = [];
 
-
-
-
-
-
-
-
-
         visitCount.$loaded().then(function() {
             $scope.visitCount = visitCount;
 
@@ -137,28 +129,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             }
         });
 
-
-
-
-
-
-       /*  totalVisitCount.$loaded().then(function() {
+        /* totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
 
             console.log($scope.totalVisitCount.length)
-        })
+        }) */
 
- */
-
-
-
-
-
-
-
-
-/* 
-        totalVisitCount.$loaded().then(function() {
+        /* totalVisitCount.$loaded().then(function() {
             $scope.totalVisitCount = totalVisitCount;
 
             if ($scope.totalVisitCount.length === 0) {
@@ -187,8 +164,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             $scope.totalCount = $scope.totalVisitCount.length;
             counterrr = $scope.totalVisitCount.length;
             angular.element('#counterrr').html(counterrr);
-        });
- */
+        }); */
         
         marcasList.$loaded().then(function() {  
             $scope.marcasList = marcasList;
@@ -426,12 +402,12 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         };
 
         $scope.getDestaque1 = function() {
-            var record = $scope.marcasList.$getRecord("-L-HLTolw3Zns4kBqq1F");
+            /* var record = $scope.marcasList.$getRecord("-L-HLTolw3Zns4kBqq1F");
             $scope.destaque1 = record.marca;
-            fromDestaque1 = true;
+            fromDestaque1 = true; */
         }
         $scope.getDestaque2 = function() {
-            var record = $scope.marcasList.$getRecord("-Kz9FKzrMwKYauRRX3ni");
+            var record = $scope.marcasList.$getRecord("-L-QxLcRFZfep2NkgzeK");
             $scope.destaque2 = record.marca;
             fromDestaque2 = true;
         }
