@@ -412,7 +412,7 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
             fromDestaque2 = true;
         }
         $scope.getDestaque3 = function() {
-            var record = $scope.marcasList.$getRecord("-L2Hf0T0j1uIGB4HOG2P");
+            var record = $scope.marcasList.$getRecord("-KzTUqWI3aj0oWt8YS95");
             $scope.destaque3 = record.marca;
             fromDestaque3 = true;
         }
@@ -436,13 +436,13 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
                 $scope.isMarcaDetails = false;
             }
             if (param == "3") {
-                $location.url('/marcas/tipicamente-portugues');
+                $location.url('/marcas/bebe-e-crianca');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "4") {
-                $location.url('/marcas/joias-acessorios-malas');
+                $location.url('/gastronomia/chocolates-e-doces');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
