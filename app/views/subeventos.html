@@ -3,35 +3,50 @@
         <div class="breadcrumbs">
             <div class="row">
                 <div class="col-sm-12 visible-xs">
-                    <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Eventos</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Eventos</a>
+                    </div> 
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Events</a>                    
+                    </div> 
                 </div>
                 <div class="col-sm-12 hidden-xs">
-                    <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Eventos</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Eventos</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Events</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="categoria-margin">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center h2-title hidden-xs">Eventos</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center h2-title hidden-xs">Eventos</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center h2-title hidden-xs">Events</h2>
                 </div>
                 <div class="col-sm-12">
-                    <h2 class="text-center font-hand-title hidden-xs">Pare de sonhar! Realize!</h2>
-                    <h2 class="text-center font-hand-title-xs visible-xs">Pare de sonhar! Realize!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title hidden-xs">Pare de sonhar! Realize!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title hidden-xs">Stop dreaming! Do it!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title-xs visible-xs">Pare de sonhar! Realize!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title-xs visible-xs">Stop dreaming! Do it!</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-3 hidden-xs">
                     <a href="eventos/bolos-e-pastelaria">
                         <div class="categoria" style="background-image: url('images/bolos.jpg')">
-                            <p class="categorias-a">Bolos e Pastelaria</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Bolos e Pastelaria</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Cakes and Bakery</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="eventos/bolos-e-pastelaria">
                         <div class="categoria-xs" style="background-image: url('images/bolos.jpg')">
-                            <p class="categorias-a">Bolos e Pastelaria</P>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Bolos e Pastelaria</P>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Cakes and Bakery</P>
                         </div>
                     </a>
                 </div>
@@ -39,14 +54,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="eventos/empresas-de-organizaçao-de-eventos">
                         <div class="categoria" style="background-image: url('images/organizacao.jpg')">
-                            <p class="categorias-a">Empresas de Organização de Eventos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Empresas de Organização de Eventos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Events Organizer Company</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="eventos/empresas-de-organizaçao-de-eventos">
                         <div class="categoria-xs" style="background-image: url('images/organizacao.jpg')">
-                            <p class="categorias-a">Empresas de Organização de Eventos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Empresas de Organização de Eventos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Events Organizer Company</p>
                         </div>
                     </a>
                 </div>
@@ -54,14 +71,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="eventos/sempre-em-festa">
                         <div class="categoria" style="background-image: url('images/festa.jpg')">
-                            <p class="categorias-a">Sempre em Festa (casamentos, batizados e muitos artigos)</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Sempre em Festa (casamentos, batizados e muitos artigos)</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Always Partying (weedings, baptized and other articles)</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="eventos/sempre-em-festa">
                         <div class="categoria-xs" style="background-image: url('images/festa.jpg')">
-                            <p class="categorias-a">Sempre em Festa (casamentos, batizados e muitos artigos)</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Sempre em Festa (casamentos, batizados e muitos artigos)</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Always Partying (weedings, baptized and other articles)</p>
                         </div>
                     </a>
                 </div>
@@ -69,14 +88,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="eventos/servico-de-fotografia-e-video">
                         <div class="categoria" style="background-image: url('images/fotografia.jpg')">
-                            <p class="categorias-a">Serviço de Fotografia e Vídeo</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Serviço de Fotografia e Vídeo</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Photography and Video Services</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="eventos/servico-de-fotografia-e-video">
                         <div class="categoria-xs" style="background-image: url('images/fotografia.jpg')">
-                            <p class="categorias-a">Serviço de Fotografia e Vídeo</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Serviço de Fotografia e Vídeo</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Photography and Video Services</p>
                         </div>
                     </a>
                 </div>

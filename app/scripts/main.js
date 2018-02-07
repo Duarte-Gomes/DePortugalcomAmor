@@ -11,8 +11,8 @@ app.directive('fileModel',['$parse', function ($parse){
     }
 }]);
 
-app.controller('MainCtrl', ['$scope', '$rootScope', 'categoriasList', 'subCategoriasList', 'marcasList', 'visitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
-    function($scope, $rootScope, categoriasList, subCategoriasList, marcasList, visitCount, $firebaseStorage, $window, $location, orderByFilter) {
+app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList', 'subCategoriasList', 'marcasList', 'visitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
+    function($scope, $cookies, $rootScope, categoriasList, subCategoriasList, marcasList, visitCount, $firebaseStorage, $window, $location, orderByFilter) {
 
         var postKey;
         var postKeyCount;
@@ -104,15 +104,20 @@ app.controller('MainCtrl', ['$scope', '$rootScope', 'categoriasList', 'subCatego
         var sortedEspeciariasList = [];
         var sortedQueijosList = [];
 
-        $scope.language = "PT";
-
-        $rootScope.setLangPT = function() {
-            $scope.language = "PT";
+        $rootScope.setLangPt = function() {
+            $scope.language = "Pt";
+            $cookies.put('language', 'Pt')
         }
         $rootScope.setLangEng = function() {
             $scope.language = "Eng";
+            $cookies.put('language', 'Eng')
         }
 
+        var checkCookie = $cookies.get('language');
+        if (checkCookie) {
+            $scope.language = checkCookie;
+        }
+        
         visitCount.$loaded().then(function() {
             $scope.visitCount = visitCount;
 

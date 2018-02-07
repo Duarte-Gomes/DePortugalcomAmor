@@ -3,36 +3,54 @@
         <div class="breadcrumbs">
             <div class="row">
                 <div class="col-sm-12 visible-xs">
-                    <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Online Portuguese Brands</a>
+                    </div>
                 </div>
                 <div class="col-sm-12 hidden-xs">
-                    <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Online Portuguese Brands</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="categoria-margin">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center h2-title hidden-xs">Marcas Portuguesas Online</h2>
-                    <!--<h2 class="text-center h2-title visible-xs">Marcas Portuguesas Online</h2>-->
+                    <div ng-if="language == 'Pt'">
+                        <h2 class="text-center h2-title hidden-xs">Marcas Portuguesas Online</h2>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <h2 class="text-center h2-title hidden-xs">Online Portuguese Brands</h2>
+                    </div>
                 </div>
                 <div class="col-sm-12">
-                    <h2 class="text-center font-hand-title hidden-xs">Seja feliz! Compre o que é nosso!</h2>
-                    <h2 class="text-center font-hand-title-xs visible-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title hidden-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title hidden-xs">Be Happy! Buy what is ours!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title-xs visible-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title-xs visible-xs">Be Happy! Buy what is ours!</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/animais">
                         <div class="categoria" style="background-image: url('images/animais.jpg')">
-                            <p class="categorias-a">animais</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">animais</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">animals</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/animais">
                         <div class="categoria-xs" style="background-image: url('images/animais.jpg')">
-                            <p class="categorias-a">animais</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">animais</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">animals</p>
                         </div>
                     </a>
                 </div>
@@ -40,14 +58,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/artesanato">
                         <div class="categoria" style="background-image: url('images/artesanato.jpg')">
-                            <p class="categorias-a">artesanato</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">artesanato</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">craft</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/artesanato">
                         <div class="categoria-xs" style="background-image: url('images/artesanato.jpg')">
-                            <p class="categorias-a">artesanato</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">artesanato</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">craft</p>
                         </div>
                     </a>
                 </div>
@@ -55,14 +75,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/bebe-e-crianca">
                         <div class="categoria" style="background-image: url('images/bebe.jpg')">
-                            <p class="categorias-a" >Bebé e Criança</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Bebé e Criança</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Baby and Child</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/bebe-e-crianca">
                         <div class="categoria-xs" style="background-image: url('images/bebe.jpg')">
-                            <p class="categorias-a">Bebé e Criança</P>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Bebé e Criança</P>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Baby and Child</P>
                         </div>
                     </a>
                 </div>
@@ -70,14 +92,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/decoracao">
                         <div class="categoria" style="background-image: url('images/decoracao.jpg')">
-                            <p class="categorias-a">decoração</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">decoração</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">decoration</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/decoracao">
                         <div class="categoria-xs" style="background-image: url('images/decoracao.jpg')">
-                            <p class="categorias-a">decoração</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">decoração</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">decoration</p>
                         </div>
                     </a>
                 </div>  
@@ -85,14 +109,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/ideias-unicas">
                         <div class="categoria" style="background-image: url('images/ideias.jpg')">
-                            <p class="categorias-a">ideias únicas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">ideias únicas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">unique ideas</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/ideias-unicas">
                         <div class="categoria-xs" style="background-image: url('images/ideias.jpg')">
-                            <p class="categorias-a">ideias únicas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">ideias únicas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">unique ideas</p>
                         </div>
                     </a>
                 </div>
@@ -100,14 +126,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/joias-acessorios-malas">
                         <div class="categoria" style="background-image: url('images/joias.jpg')">
-                            <p class="categorias-a">Joias, Acessórios e Malas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Joias, Acessórios e Malas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Jewelry, Accessories and Bags</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/joias-acessorios-malas">
                         <div class="categoria-xs" style="background-image: url('images/joias.jpg')">
-                            <p class="categorias-a">Joias, Acessórios e Malas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Joias, Acessórios e Malas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Jewelry, Accessories and Bags</p>
                         </div>
                     </a>
                 </div>
@@ -115,14 +143,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/tipicamente-portugues">
                         <div class="categoria" style="background-image: url('images/tipicamente.jpg')">
-                            <p class="categorias-a">tipicamente português</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">tipicamente português</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Typically Portuguese</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/tipicamente-portugues">
                         <div class="categoria-xs" style="background-image: url('images/tipicamente.jpg')">
-                            <p class="categorias-a">tipicamente português</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">tipicamente português</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Typically Portuguese</p>
                         </div>
                     </a>
                 </div>
@@ -130,14 +160,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="marcas/vestuario-e-calcado">
                         <div class="categoria" style="background-image: url('images/vestuario.jpg')">
-                            <p class="categorias-a">vestuário e calçado</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">vestuário e calçado</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">clothing and footwear</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="marcas/vestuario-e-calcado">
                         <div class="categoria-xs" style="background-image: url('images/vestuario.jpg')">
-                            <p class="categorias-a">vestuário e calçado</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">vestuário e calçado</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">clothing and footwear</p>
                         </div>
                     </a>
                 </div>  

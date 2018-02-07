@@ -3,20 +3,32 @@
         <div class="breadcrumbs">
             <div class="row">
                 <div class="col-sm-12 visible-xs">
-                    <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Turismo</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Turismo</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Turism</a>
+                    </div>
                 </div>
                 <div class="col-sm-12 hidden-xs">
-                    <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Turismo</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Turismo</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Turism</a>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="categoria-margin">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center h2-title">Turismo</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center h2-title">Turismo</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center h2-title">Turism</h2>
                 </div>
                 <div class="col-sm-12">
-                    <h2 class="text-center font-hand-title">Novidades em breve</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title">Novidades em breve</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title">News Soon</h2>
                 </div>
             </div>
         </div>

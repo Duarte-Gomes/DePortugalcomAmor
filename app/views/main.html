@@ -50,45 +50,46 @@
     <div class="categoria-margin">
         <div class="row">
             <div class="col-sm-12">
-                <h2 class="text-center font-hand-title hidden-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
-                <h2 class="text-center font-hand-title-xs visible-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
+                <div ng-if="language == 'Pt'">
+                    <h2 class="text-center font-hand-title hidden-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
+                    <h2 class="text-center font-hand-title-xs visible-xs">O que é nacional tem qualidade... e nós valorizamos!</h2>
+                </div>
+                <div ng-if="language == 'Eng'">
+                    <h2 class="text-center font-hand-title hidden-xs">What is national have quality... and we value it!</h2>
+                    <h2 class="text-center font-hand-title-xs visible-xs">What is national have quality... and we value it!</h2>
+                </div>
             </div>
         </div>
         <div class="row">
-            <!-- <div class="col-sm-4 text-center">
-                <a href="eventos"><img src="./images/eventos.png" class="categoria-img-style"></a>
-            </div>
-            <div class="col-sm-4 text-center">
-                <a href="/marcas"><img src="./images/marcas.png" class="categoria-img-style"></a>
-            </div>
-            <div class="col-sm-4 text-center">
-                <a href="/turismo"><img src="./images/turismo.png" class="categoria-img-style"></a>
-            </div> -->
             <div class="col-sm-3">
                 <a href="/eventos">
                     <div class="vertentes" style="background-image: url('images/eventos.jpg')">
-                        <p class="categorias-a">Eventos</p>
+                        <p ng-if="language == 'Pt'" class="categorias-a">Eventos</p>
+                        <p ng-if="language == 'Eng'" class="categorias-a">Events</p>
                     </div>
                 </a>
             </div>
             <div class="col-sm-3">
                 <a href="/marcas">
                     <div class="vertentes" style="background-image: url('images/marcas.jpg')">
-                        <p class="categorias-a">Marcas Portuguesas Online</p>
+                        <p ng-if="language == 'Pt'" class="categorias-a">Marcas Portuguesas Online</p>
+                        <p ng-if="language == 'Eng'" class="categorias-a">Online Portuguese Brands</p>
                     </div>
                 </a>
             </div>
             <div class="col-sm-3">
                 <a href="/gastronomia">
                     <div class="vertentes" style="background-image: url('images/gastronomia.jpg')">
-                        <p class="categorias-a">Gastronomia</p>
+                        <p ng-if="language == 'Pt'" class="categorias-a">Gastronomia</p>
+                        <p ng-if="language == 'Eng'" class="categorias-a">Gastronomy</p>
                     </div>
                 </a>    
             </div>
             <div class="col-sm-3">
                 <a href="/turismo">
                     <div class="vertentes" style="background-image: url('images/turismo.jpg')">
-                        <p class="categorias-a">Turismo</p>
+                        <p ng-if="language == 'Pt'" class="categorias-a">Turismo</p>
+                        <p ng-if="language == 'Eng'" class="categorias-a">Turism</p>
                     </div>
                 </a>    
             </div>

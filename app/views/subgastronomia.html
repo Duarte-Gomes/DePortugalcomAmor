@@ -3,35 +3,50 @@
         <div class="breadcrumbs">
             <div class="row">
                 <div class="col-sm-12 visible-xs">
-                    <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                       <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomy</a>
+                    </div>
                 </div>
                 <div class="col-sm-12 hidden-xs">
-                    <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a>
+                    <div ng-if="language == 'Pt'">
+                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a>
+                    </div>
+                    <div ng-if="language == 'Eng'">
+                        <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomy</a>
+                    </div>                    
                 </div>
             </div>
         </div>
         <div class="categoria-margin">
             <div class="row">
                 <div class="col-sm-12">
-                    <h2 class="text-center h2-title hidden-xs">Gastronomia</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center h2-title hidden-xs">Gastronomia</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center h2-title hidden-xs">Gastronomy</h2>
                 </div>
                 <div class="col-sm-12">
-                    <h2 class="text-center font-hand-title hidden-xs">Seja feliz! Compre o que é nosso!</h2>
-                    <h2 class="text-center font-hand-title-xs visible-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title hidden-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title hidden-xs">Be Happy! Buy what is ours!</h2>
+                    <h2 ng-if="language == 'Pt'" class="text-center font-hand-title-xs visible-xs">Seja feliz! Compre o que é nosso!</h2>
+                    <h2 ng-if="language == 'Eng'" class="text-center font-hand-title-xs visible-xs">Be Happy! Buy what is ours!</h2>
                 </div>
             </div>
             <div class="row">
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/aperitivos">
                         <div class="categoria" style="background-image: url('images/aperitivos.jpg')">
-                            <p class="categorias-a">aperitivos doces e salgados</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">aperitivos doces e salgados</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">sweet and savory appetizers</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/aperitivos">
                         <div class="categoria-xs" style="background-image: url('images/aperitivos.jpg')">
-                            <p class="categorias-a">aperitivos doces e salgados</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">aperitivos doces e salgados</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">sweet and savory appetizers</p>
                         </div>
                     </a>
                 </div>
@@ -39,14 +54,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/chas-e-infusoes">
                         <div class="categoria" style="background-image: url('images/chas.jpg')">
-                            <p class="categorias-a">chás e infusões</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">chás e infusões</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">teas and infusions</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/chas-e-infusoes">
                         <div class="categoria-xs" style="background-image: url('images/chas.jpg')">
-                            <p class="categorias-a">chás e infusões</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">chás e infusões</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">teas and infusions</p>
                         </div>
                     </a>
                 </div>
@@ -54,14 +71,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/chocolates-e-doces">
                         <div class="categoria" style="background-image: url('images/chocolates.jpg')">
-                            <p class="categorias-a">Chocolates, doces e compotas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Chocolates, doces e compotas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Chocolates, sweets and jams</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/chocolates-e-doces">
                         <div class="categoria-xs" style="background-image: url('images/chocolates.jpg')">
-                            <p class="categorias-a">Chocolates, doces e compotas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">Chocolates, doces e compotas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">Chocolates, sweets and jams</p>
                         </div>
                     </a>
                 </div>
@@ -69,14 +88,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/especiarias-e-temperos">
                         <div class="categoria" style="background-image: url('images/especiarias.jpg')">
-                            <p class="categorias-a">especiarias e outros temperos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">especiarias e outros temperos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">spices and other seasonings</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/especiarias-e-temperos">
                         <div class="categoria-xs" style="background-image: url('images/especiarias.jpg')">
-                            <p class="categorias-a">especiarias e outros temperos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">especiarias e outros temperos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">spices and other seasonings</p>
                         </div>
                     </a>
                 </div>
@@ -84,14 +105,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/pates-e-conservas">
                         <div class="categoria" style="background-image: url('images/pates.jpg')">
-                            <p class="categorias-a">patés e conservas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">patés e conservas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">pates and preserves</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/pates-e-conservas">
                         <div class="categoria-xs" style="background-image: url('images/pates.jpg')">
-                            <p class="categorias-a">patés e conservas</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">patés e conservas</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">pates and preserves</p>
                         </div>
                     </a>
                 </div>
@@ -99,14 +122,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/queijos-e-enchidos">
                         <div class="categoria" style="background-image: url('images/queijos.jpg')">
-                            <p class="categorias-a">queijos e enchidos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">queijos e enchidos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">cheeses and sausages</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/queijos-e-enchidos">
                         <div class="categoria-xs" style="background-image: url('images/queijos.jpg')">
-                            <p class="categorias-a">queijos e enchidos</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">queijos e enchidos</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">cheeses and sausages</p>
                         </div>
                     </a>
                 </div>
@@ -114,14 +139,16 @@
                 <div class="col-sm-3 hidden-xs">
                     <a href="gastronomia/vinhos-e-licores">
                         <div class="categoria" style="background-image: url('images/vinhos.jpg')">
-                            <p class="categorias-a">vinhos e licores</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">vinhos e licores</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">wines and spirits</p>
                         </div>
                     </a>
                 </div>
                 <div class="col-sm-3 visible-xs">
                     <a href="gastronomia/vinhos-e-licores">
                         <div class="categoria-xs" style="background-image: url('images/vinhos.jpg')">
-                            <p class="categorias-a">vinhos e licores</p>
+                            <p ng-if="language == 'Pt'" class="categorias-a">vinhos e licores</p>
+                            <p ng-if="language == 'Eng'" class="categorias-a">wines and spirits</p>
                         </div>
                     </a>
                 </div>
