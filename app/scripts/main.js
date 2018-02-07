@@ -11,8 +11,8 @@ app.directive('fileModel',['$parse', function ($parse){
     }
 }]);
 
-app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'marcasList', 'visitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
-    function($scope, categoriasList, subCategoriasList, marcasList, visitCount, $firebaseStorage, $window, $location, orderByFilter) {
+app.controller('MainCtrl', ['$scope', '$rootScope', 'categoriasList', 'subCategoriasList', 'marcasList', 'visitCount', '$firebaseStorage', '$window', '$location', 'orderByFilter',
+    function($scope, $rootScope, categoriasList, subCategoriasList, marcasList, visitCount, $firebaseStorage, $window, $location, orderByFilter) {
 
         var postKey;
         var postKeyCount;
@@ -103,6 +103,15 @@ app.controller('MainCtrl', ['$scope', 'categoriasList', 'subCategoriasList', 'ma
         var sortedChasList = [];
         var sortedEspeciariasList = [];
         var sortedQueijosList = [];
+
+        $scope.language = "PT";
+
+        $rootScope.setLangPT = function() {
+            $scope.language = "PT";
+        }
+        $rootScope.setLangEng = function() {
+            $scope.language = "Eng";
+        }
 
         visitCount.$loaded().then(function() {
             $scope.visitCount = visitCount;

@@ -62,7 +62,8 @@
                         <h1>{{marca.nome}}</h1>
                         <p>{{marca.categoria}}</p>
                         <p>{{marca.subCategoria}}</p>
-                        <p>{{marca.desqPeq}}</p>
+                        <p ng-hide="language ='Eng'">{{marca.desqPeq}}</p>
+                        <p ng-show="language == 'Eng'">{{marca.desqPeq}}</p>
                         <p>{{marca.desqGeral}}</p>
                         <p ng-show="marca.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{marca.morada}}</p>
                         <p ng-show="marca.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{marca.localidade}}</p>
