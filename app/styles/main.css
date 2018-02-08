@@ -292,6 +292,13 @@ div #mc_embed_signup_scroll label {
     background-color: lightgrey;
     padding: 60px 0;
 }
+
+.bandeira {
+    width: 40px;
+    margin-top: 40px;
+    float: right;
+    margin-right: 15px;
+}
 @media (min-width: 768px ) {
     .nav-ul-style-1 {
         margin-top: 30px;

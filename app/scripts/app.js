@@ -82,99 +82,99 @@ app.config(function ($routeProvider, $locationProvider, $compileProvider) {
 		})
 		
         .when('/marcas/joias-acessorios-malas', {
-			templateUrl: 'views/joias-acessorios-malas.html',
+			templateUrl: 'views/marcas/joias-acessorios-malas.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/bebe-e-crianca', {
-			templateUrl: 'views/bebe-e-crianca.html',
+			templateUrl: 'views/marcas/bebe-e-crianca.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/vestuario-e-calcado', {
-			templateUrl: 'views/vestuario-e-calcado.html',
+			templateUrl: 'views/marcas/vestuario-e-calcado.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/animais', {
-			templateUrl: 'views/animais.html',
+			templateUrl: 'views/marcas/animais.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/ideias-unicas', {
-			templateUrl: 'views/ideias-unicas.html',
+			templateUrl: 'views/marcas/ideias-unicas.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/tipicamente-portugues', {
-			templateUrl: 'views/tipicamente-portugues.html',
+			templateUrl: 'views/marcas/tipicamente-portugues.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/artesanato', {
-			templateUrl: 'views/artesanato.html',
+			templateUrl: 'views/marcas/artesanato.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/marcas/decoracao', {
-			templateUrl: 'views/decoracao.html',
+			templateUrl: 'views/marcas/decoracao.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 
 		.when('/eventos/empresas-de-organizaçao-de-eventos', {
-			templateUrl: 'views/organizacao-eventos.html',
+			templateUrl: 'views/eventos/organizacao-eventos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/eventos/bolos-e-pastelaria', {
-			templateUrl: 'views/bolos-pastelaria.html',
+			templateUrl: 'views/eventos/bolos-pastelaria.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/eventos/servico-de-fotografia-e-video', {
-			templateUrl: 'views/fotografia-video.html',
+			templateUrl: 'views/eventos/fotografia-video.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/eventos/sempre-em-festa', {
-			templateUrl: 'views/sempre-festa.html',
+			templateUrl: 'views/eventos/sempre-festa.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 
 		.when('/gastronomia/chocolates-e-doces', {
-			templateUrl: 'views/chocolates-doces.html',
+			templateUrl: 'views/gastronomia/chocolates-doces.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/pates-e-conservas', {
-			templateUrl: 'views/pates-conservas.html',
+			templateUrl: 'views/gastronomia/pates-conservas.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/vinhos-e-licores', {
-			templateUrl: 'views/vinhos-licores.html',
+			templateUrl: 'views/gastronomia/vinhos-licores.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/aperitivos', {
-			templateUrl: 'views/aperitivos.html',
+			templateUrl: 'views/gastronomia/aperitivos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/queijos-e-enchidos', {
-			templateUrl: 'views/queijos-enchidos.html',
+			templateUrl: 'views/gastronomia/queijos-enchidos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/chas-e-infusoes', {
-			templateUrl: 'views/chas-infusoes.html',
+			templateUrl: 'views/gastronomia/chas-infusoes.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})
 		.when('/gastronomia/especiarias-e-temperos', {
-			templateUrl: 'views/especiarias-temperos.html',
+			templateUrl: 'views/gastronomia/especiarias-temperos.html',
 			controller: 'MainCtrl',
 			controllerAs: 'main'
 		})

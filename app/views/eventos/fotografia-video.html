@@ -4,35 +4,49 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Eventos</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Events</a>
+                        </div>
                     </div>  
                     <div class="col-sm-11 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a>
-                    </div>                       
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Eventos</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">                    
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Events</a>
+                        </div>
+                    </div>                         
                 </div>
             </div>
             <div class="row">
-                <h2 class="text-center font-hand-title">Ideias Únicas</h2>
+                <h2 ng-if="language == 'Pt'" class="text-center font-hand-title">Serviço de Fotografia e Vídeo</h2>
+                <h2 ng-if="language == 'Eng'" class="text-center font-hand-title">Photography and Video Services</h2>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedIdeiasList | orderBy:sorting">
+                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedFotografiaList | orderBy:sorting">
                     <a class="to-top" ng-click="getDetails(item.$id)">
                         <div class="marca-prev hidden-md hidden-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                         <div class="marca-prev-md visible-md visible-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                         <div class="marca-prev-xs visible-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                     </a>
@@ -43,10 +57,20 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 col-xs-10 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Ideias Únicas</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Eventos</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Serviço de Fotografia e Vídeo</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/eventos">Events</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Photography and Video Services</a>
+                        </div>    
                     </div>
                     <div class="col-sm-11 col-xs-10 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Ideias Únicas</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Eventos</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Serviço de Fotografia e Vídeo</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/eventos">Events</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Photography and Video Services</a>
+                        </div>
                     </div>
                     <div class="col-sm-1 col-xs-2">
                         <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
@@ -62,8 +86,10 @@
                         <h1>{{marca.nome}}</h1>
                         <p>{{marca.categoria}}</p>
                         <p>{{marca.subCategoria}}</p>
-                        <p>{{marca.desqPeq}}</p>
-                        <p>{{marca.desqGeral}}</p>
+                        <p ng-if="language == 'Pt'">{{marca.desqPeq}}</p>
+                        <p ng-if="language == 'Eng'">{{marca.desqPeqEng}}</p>
+                        <p ng-if="language == 'Pt'">{{marca.desqGeral}}</p>
+                        <p ng-if="language == 'Eng'">{{marca.desqGeralEng}}</p>
                         <p ng-show="marca.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{marca.morada}}</p>
                         <p ng-show="marca.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{marca.localidade}}</p>
                         <p ng-show="marca.concelho"><i class="fa fa-map-marker icon-detail-place" aria-hidden="true"></i>{{marca.concelho}}</p>
@@ -76,11 +102,16 @@
                         <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+                        <a href="{{marca.youtube}}" target="_blank" ng-show="marca.youtube"><i class="fa fa-youtube-square brand-symbol" aria-hidden="true"></i></a> 
+                        <a href="{{marca.vimeo}}" target="_blank" ng-show="marca.vimeo"><i class="fa fa-vimeo-square brand-symbol" aria-hidden="true"></i></a> 
                     </div>
                 </div>
             </div>
             <div class="row" style="margin-top: 30px;">
-                <div class="marca-detail-bottom clearfix">
+                <div class="marca-detail-bottom text-center clearfix">
+                    <div class="col-sm-2">
+                        <a href="{{marca.reel}}" target="_blank" ng-show="marca.reel"><i class="fa fa-film brand-symbol-reel" aria-hidden="true"></i><span style="display: block; color: black; font-size: 30px;">VIDEO DEMO</span></a>
+                    </div>
                     <div class="col-sm-3">
                         <img src="{{marca.foto1}}" style="width: 100%">
                     </div>
@@ -92,6 +123,12 @@
                     </div>
                     <div class="col-sm-3">
                         <img src="{{marca.foto4}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto5}}" style="width: 100%">
+                    </div>
+                    <div class="col-sm-3">
+                        <img src="{{marca.foto6}}" style="width: 100%">
                     </div>
                 </div>
             </div>

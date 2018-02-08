@@ -4,35 +4,49 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Online Portuguese Brands</a>
+                        </div>
                     </div>  
                     <div class="col-sm-11 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">                    
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Online Portuguese Brands</a>
+                        </div>
                     </div>                       
                 </div>
             </div>
             <div class="row">
-                <h2 class="text-center font-hand-title">Queijos e enchidos</h2>
+                <h2 ng-if="language == 'Pt'" class="text-center font-hand-title">Animais</h2>
+                <h2 ng-if="language == 'Eng'" class="text-center font-hand-title">Animals</h2>
             </div>
             <div class="row">
-                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedQueijosList | orderBy:sorting">
+                <div class="col-md-4 col-sm-6 marca-margin" ng-repeat="item in sortedAnimaisList | orderBy:sorting">
                     <a class="to-top" ng-click="getDetails(item.$id)">
                         <div class="marca-prev hidden-md hidden-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                         <div class="marca-prev-md visible-md visible-sm hidden-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                         <div class="marca-prev-xs visible-xs" style="background-image: url({{item.marca.foto1}});">
                             <div class="subcategoria-style">
                                 <p class="subcategoria-style-lett">{{item.marca.nome}}</p>
-                                <p class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Pt'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeq}}</p>
+                                <p ng-if="language == 'Eng'" class="subcategoria-style-lett-2 font-hand-desc">{{item.marca.desqPeqEng}}</p>
                             </div>
                         </div>
                     </a>
@@ -43,10 +57,20 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 col-xs-10 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Queijos e enchidos</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Animais</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Online Portuguese Brands</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Animals</a>
+                        </div>
                     </div>
                     <div class="col-sm-11 col-xs-10 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Queijos e enchidos</a>
+                        <div ng-if="language == 'Pt'">
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Marcas Portuguesas Online</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Animais</a>
+                        </div>
+                        <div ng-if="language == 'Eng'">
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Online Portuguese Brands</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Animais</a>
+                        </div>
                     </div>
                     <div class="col-sm-1 col-xs-2">
                         <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
@@ -62,8 +86,10 @@
                         <h1>{{marca.nome}}</h1>
                         <p>{{marca.categoria}}</p>
                         <p>{{marca.subCategoria}}</p>
-                        <p>{{marca.desqPeq}}</p>
-                        <p>{{marca.desqGeral}}</p>
+                        <p ng-if="language == 'Pt'">{{marca.desqPeq}}</p>
+                        <p ng-if="language == 'Eng'">{{marca.desqPeqEng}}</p>
+                        <p ng-if="language == 'Pt'">{{marca.desqGeral}}</p>
+                        <p ng-if="language == 'Eng'">{{marca.desqGeralEng}}</p>
                         <p ng-show="marca.morada"><i class="fa fa-address-card icon-detail" aria-hidden="true"></i>{{marca.morada}}</p>
                         <p ng-show="marca.localidade"><i class="fa fa-map-o icon-detail" aria-hidden="true"></i>{{marca.localidade}}</p>
                         <p ng-show="marca.concelho"><i class="fa fa-map-marker icon-detail-place" aria-hidden="true"></i>{{marca.concelho}}</p>
@@ -76,6 +102,7 @@
                         <a href="{{marca.twitter}}" target="_blank" ng-show="marca.twitter"><i class="fa fa-twitter-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.linkedin}}" target="_blank" ng-show="marca.linkedin"><i class="fa fa-linkedin-square brand-symbol" aria-hidden="true"></i></a>
                         <a href="{{marca.googleplus}}" target="_blank" ng-show="marca.googleplus"><i class="fa fa-google-plus-square brand-symbol" aria-hidden="true"></i></a> 
+                        <!-- <div class="fb-share-button" data-href="http://deportugalcomamor.pt/" data-layout="button" data-size="large" data-mobile-iframe="true"><a class="fb-xfbml-parse-ignore" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Fdeportugalcomamor.pt%2F&amp;src=sdkpreparse">Partilhar</a></div> -->
                     </div>
                 </div>
             </div>
@@ -98,3 +125,4 @@
         </div>
     </div>
 </div>
+

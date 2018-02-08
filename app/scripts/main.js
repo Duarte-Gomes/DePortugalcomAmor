@@ -116,6 +116,8 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
         var checkCookie = $cookies.get('language');
         if (checkCookie) {
             $scope.language = checkCookie;
+        } else {
+            $scope.language = "Pt";
         }
         
         visitCount.$loaded().then(function() {
