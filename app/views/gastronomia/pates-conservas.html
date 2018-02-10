@@ -5,18 +5,18 @@
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 hidden-xs">
                         <div ng-if="language == 'Pt'">
-                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Gastronomia</a>
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a>
                         </div>
                         <div ng-if="language == 'Eng'">
-                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/marcas">Gastronomy</a>
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomy</a>
                         </div>
                     </div>  
                     <div class="col-sm-11 visible-xs">
                         <div ng-if="language == 'Pt'">
-                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Gastronomia</a>
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a>
                         </div>
                         <div ng-if="language == 'Eng'">                    
-                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/marcas">Gastronomy</a>
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomy</a>
                         </div>
                     </div>                              
                 </div>
@@ -57,12 +57,20 @@
             <div class="row">
                 <div class="breadcrumbs clearfix">
                     <div class="col-sm-11 col-xs-10 hidden-xs">
-                        <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Patés e Conservas</a>
-                        <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomy</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">pates and preserves</a>
+                        <div ng-if="language == 'Pt'"> 
+                            <a class="breadcrumbs1" href="/">Início</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">Patés e Conservas</a>
+                        </div>
+                        <div ng-if="language == 'Eng'"> 
+                            <a class="breadcrumbs1" href="/">Home</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" href="/gastronomia">Gastronomy</a><span class="breadcrumbs-sep"> / </span><a class="breadcrumbs2" ng-click="atras()">pates and preserves</a>
+                        </div>
                     </div>
                     <div class="col-sm-11 col-xs-10 visible-xs">
-                        <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Patés e Conservas</a>
-                        <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomy</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">pates and preserves</a>
+                        <div ng-if="language == 'Pt'"> 
+                            <a class="breadcrumbs1-xs" href="/">Início</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomia</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">Patés e Conservas</a>
+                        </div>
+                        <div ng-if="language == 'Eng'"> 
+                            <a class="breadcrumbs1-xs" href="/">Home</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" href="/gastronomia">Gastronomy</a><span class="breadcrumbs-sep-xs"> / </span><a class="breadcrumbs2-xs" ng-click="atras()">pates and preserves</a>
+                        </div>
                     </div>
                     <div class="col-sm-1 col-xs-2">
                         <button class="no-class-button" ng-click="atras()"><i class="fa fa-window-close" aria-hidden="true"></i></button>
