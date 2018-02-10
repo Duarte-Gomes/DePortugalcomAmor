@@ -418,9 +418,9 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
         };
 
         $scope.getDestaque1 = function() {
-            /* var record = $scope.marcasList.$getRecord("-L-HLTolw3Zns4kBqq1F");
+            var record = $scope.marcasList.$getRecord("-KzIWjetlF1RSiKfd0hs");
             $scope.destaque1 = record.marca;
-            fromDestaque1 = true; */
+            fromDestaque1 = true;
         }
         $scope.getDestaque2 = function() {
             var record = $scope.marcasList.$getRecord("-L-QxLcRFZfep2NkgzeK");
@@ -440,7 +440,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
 
         $scope.atras = function(param) {
             if (param == "1") {
-                $location.url('/marcas/bebe-e-crianca');
+                $location.url('/marcas/tipicamente-portugues');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
