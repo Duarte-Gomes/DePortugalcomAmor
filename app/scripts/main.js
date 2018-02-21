@@ -423,7 +423,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
             fromDestaque1 = true;
         }
         $scope.getDestaque2 = function() {
-            var record = $scope.marcasList.$getRecord("-L-QxLcRFZfep2NkgzeK");
+            var record = $scope.marcasList.$getRecord("-Kz-FrsyF9JJL2Ge3OhM");
             $scope.destaque2 = record.marca;
             fromDestaque2 = true;
         }
@@ -433,7 +433,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
             fromDestaque3 = true;
         }
         $scope.getDestaque4 = function() {
-            var record = $scope.marcasList.$getRecord("-L0KF7dFRW_aZE91Z-gC");
+            var record = $scope.marcasList.$getRecord("-KzY_u7wRAa2w_MugMT9");
             $scope.destaque4 = record.marca;
             fromDestaque4 = true;
         }
@@ -446,7 +446,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
                 $scope.isMarcaDetails = false;
             }
             if (param == "2") {
-                $location.url('/eventos/empresas-de-organizaçao-de-eventos');
+                $location.url('/marcas/ideias-unicas');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
@@ -458,7 +458,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
                 $scope.isMarcaDetails = false;
             }
             if (param == "4") {
-                $location.url('/gastronomia/chocolates-e-doces');
+                $location.url('/marcas/artesanato');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
