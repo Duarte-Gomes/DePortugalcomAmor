@@ -428,7 +428,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
             fromDestaque2 = true;
         }
         $scope.getDestaque3 = function() {
-            var record = $scope.marcasList.$getRecord("-KzTUqWI3aj0oWt8YS95");
+            var record = $scope.marcasList.$getRecord("-L-9oNOaGdxJ6KCjduxa");
             $scope.destaque3 = record.marca;
             fromDestaque3 = true;
         }
@@ -452,7 +452,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
                 $scope.isMarcaDetails = false;
             }
             if (param == "3") {
-                $location.url('/marcas/bebe-e-crianca');
+                $location.url('/eventos/sempre-em-festa');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
