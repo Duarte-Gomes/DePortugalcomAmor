@@ -418,7 +418,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
         };
 
         $scope.getDestaque1 = function() {
-            var record = $scope.marcasList.$getRecord("-L-78xaKAuFFU5yXWGlM");
+            var record = $scope.marcasList.$getRecord("-L3SR-f-XkfPxiO3GqKb");
             $scope.destaque1 = record.marca;
             fromDestaque1 = true;
         }
@@ -440,7 +440,7 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
 
         $scope.atras = function(param) {
             if (param == "1") {
-                $location.url('/marcas/ideias-unicas');
+                $location.url('/marcas/vestuario-e-calcado');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
