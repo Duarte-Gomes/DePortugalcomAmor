@@ -418,47 +418,47 @@ app.controller('MainCtrl', ['$scope', '$cookies', '$rootScope', 'categoriasList'
         };
 
         $scope.getDestaque1 = function() {
-            var record = $scope.marcasList.$getRecord("-L3SR-f-XkfPxiO3GqKb");
+            var record = $scope.marcasList.$getRecord("-L-bkR9Bg9vaVXM8_EjD");
             $scope.destaque1 = record.marca;
             fromDestaque1 = true;
         }
         $scope.getDestaque2 = function() {
-            var record = $scope.marcasList.$getRecord("-Kz-FrsyF9JJL2Ge3OhM");
+            var record = $scope.marcasList.$getRecord("-Kz9ymgh-BTE7TEH1KP1");
             $scope.destaque2 = record.marca;
             fromDestaque2 = true;
         }
         $scope.getDestaque3 = function() {
-            var record = $scope.marcasList.$getRecord("-L-9oNOaGdxJ6KCjduxa");
+            var record = $scope.marcasList.$getRecord("-L-6y7JVE4QnKKjKXUSF");
             $scope.destaque3 = record.marca;
             fromDestaque3 = true;
         }
         $scope.getDestaque4 = function() {
-            var record = $scope.marcasList.$getRecord("-KzY_u7wRAa2w_MugMT9");
+            var record = $scope.marcasList.$getRecord("-L-9oNOaGdxJ6KCjduxa");
             $scope.destaque4 = record.marca;
             fromDestaque4 = true;
         }
 
         $scope.atras = function(param) {
             if (param == "1") {
-                $location.url('/marcas/vestuario-e-calcado');
+                $location.url('/marcas/decoracao');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "2") {
-                $location.url('/marcas/ideias-unicas');
+                $location.url('/marcas/joias-acessorios-malas');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "3") {
-                $location.url('/eventos/sempre-em-festa');
+                $location.url('/marcas/tipicamente-portugues');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
             }
             if (param == "4") {
-                $location.url('/marcas/artesanato');
+                $location.url('/eventos/sempre-em-festa');
             } else {
                 $scope.isMarcaList = true;
                 $scope.isMarcaDetails = false;
